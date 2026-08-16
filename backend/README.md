@@ -19,7 +19,7 @@ python manage.py runserver
 
 Abrir <http://127.0.0.1:8000/>.
 
-`seed_activities` se puede ejecutar más de una vez: restaura el mismo conjunto de actividades sin duplicarlas.
+`seed_activities` se puede ejecutar más de una vez: restaura el mismo conjunto de actividades, participantes e inscripciones sin duplicarlos.
 
 ## Comandos útiles
 
@@ -37,7 +37,7 @@ python manage.py seed_activities
 
 ## Estructura relevante
 
-- `activities/models.py`: modelo `Activity`.
+- `activities/models.py`: modelos `Activity`, `Participant` y `Enrollment`.
 - `activities/views.py`: vista clásica que consulta la base.
 - `activities/templates/activities/activity_list.html`: documento HTML producido por Django.
 - `activities/management/commands/seed_activities.py`: datos reproducibles.
