@@ -1,0 +1,123 @@
+---
+interface Props {
+	activityId: string;
+}
+
+const { activityId } = Astro.props;
+const apiUrl = import.meta.env.VITE_FRONTEND_URL;
+---
+
+<section
+	class="enrollment-status"
+	data-enrollment-status
+	data-activity-id={activityId}
+	data-api-url={apiUrl}
+	data-state="loading"
+	aria-live="polite"
+	aria-labelledby="enrollment-status-title"
+>
+	<div class="enrollment-status__header">
+		<div>
+			<p class="detail-label">Estado de inscripción</p>
+			<h2 id="enrollment-status-title">Inscripción del participante</h2>
+		</div>
+		<span class="status-indicator" data-status-indicator aria-hidden="true"></span>
+	</div>
+	<p class="content-origin content-origin--client">Consulta client-side</p>
+	<p class="enrollment-status__message" data-status-message>Consultando tus inscripciones...</p>
+	<noscript>
+		<p class="enrollment-status__message">Activá JavaScript para consultar el estado de tu inscripción.</p>
+	</noscript>
+</section>
+
+<script>
+	interface Enrollment {
+		activity?: string;
+		activity_id?: string;
+		enrolled_at?: string;
+	}
+
+	interface EnrollmentsResponse {
+		data: Enrollment[];
+	}
+
+	const statusContainers = document.querySelectorAll<HTMLElement>('[data-enrollment-status]');
+
+	statusContainers.forEach(async (container) => {
+		const activityId = container.dataset.activityId;
+		const apiUrl = container.dataset.apiUrl;
+		const message = container.querySelector<HTMLElement>('[data-status-message]');
+
+		if (!activityId || !message) return;
+
+		const setStatus = (state: string, text: string, showForm = false) => {
+			container.dataset.state = state;
+			message.textContent = text;
+			container.querySelector('[data-enrollment-form]')?.remove();
+
+			if (showForm) {
+				const form = document.createElement('form');
+				form.className = 'enrollment-form';
+				form.dataset.enrollmentForm = '';
+				form.innerHTML = '<button class="button button-primary" type="submit">Inscribirme en esta actividad</button>';
+				container.append(form);
+				form.addEventListener('submit', async (event) => {
+					event.preventDefault();
+					const button = form.querySelector<HTMLButtonElement>('button');
+					if (!button) return;
+
+					button.disabled = true;
+					button.textContent = 'Enviando inscripción...';
+					container.dataset.state = 'submitting';
+
+					try {
+						const enrollResponse = await fetch(
+							`${apiUrl}/api/v1/me/enrollments/create/${activityId}`,
+							{ method: 'PUT' },
+						);
+						if (!enrollResponse.ok) {
+							const errorPayload = await enrollResponse.json().catch(() => null);
+							throw new Error(errorPayload?.error ?? 'No se pudo completar la inscripción.');
+						}
+
+						setStatus('enrolled', 'Te inscribiste correctamente en esta actividad.');
+					} catch (error) {
+						setStatus(
+							'error',
+							error instanceof Error ? error.message : 'No se pudo completar la inscripción.',
+							true,
+						);
+					}
+				});
+			}
+		};
+
+		try {
+			const response = await fetch(`${apiUrl}/api/v1/enrollments/`);
+			if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+
+			const { data }: EnrollmentsResponse = await response.json();
+			const enrollment = data.find(
+				(item) => (item.activity ?? item.activity_id) === activityId,
+			);
+
+			if (enrollment) {
+				const enrolledDate = enrollment.enrolled_at
+					? new Date(enrollment.enrolled_at).toLocaleDateString('es-AR', {
+						dateStyle: 'medium',
+					})
+					: null;
+				setStatus(
+					'enrolled',
+					enrolledDate
+						? `Ya estás inscripto en esta actividad desde el ${enrolledDate}.`
+						: 'Ya estás inscripto en esta actividad.',
+				);
+			} else {
+				setStatus('available', 'Todavía no estás inscripto en esta actividad.', true);
+			}
+		} catch {
+			setStatus('error', 'No pudimos consultar tu estado de inscripción. Intentá nuevamente más tarde.');
+		}
+	});
+</script>

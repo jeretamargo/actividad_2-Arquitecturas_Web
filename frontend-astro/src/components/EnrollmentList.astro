@@ -1,0 +1,58 @@
+---
+export interface Enrollment {
+	id: string;
+	activity?: string;
+	participant?: string;
+	activity_id?: string;
+	participant_id?: string;
+	enrolled_at: Date;
+}
+
+interface EnrollmentsResponse {
+	data: Enrollment[];
+}
+
+const { data }: EnrollmentsResponse = await fetch(
+	`${import.meta.env.VITE_FRONTEND_URL}/api/v1/enrollments/`,
+).then((res) => res.json());
+---
+
+<section class="content content--compact" aria-labelledby="enrollments-title">
+	<div class="page-heading">
+		
+		<p class="eyebrow">Seguimiento</p>
+	
+		<h1 id="enrollments-title">Mis inscripciones</h1>
+		<p class="lead">Revisá las actividades en las que estás inscripto y la fecha de registro.</p>
+	</div>
+
+	
+	<div class="page-actions page-actions--back">
+		<a class="button button-secondary" href="/">Volver a actividades</a>
+	</div>
+	{data.length > 0 ? (
+		<div class="activities-grid">
+			{data.map((enrollment: Enrollment) => (
+				<article class="activity-card">
+					<div class="enrollment-id">Inscripción #{enrollment.id}</div>
+					<h2>Actividad</h2>
+					<p class="enrollment-reference">{enrollment.activity ?? enrollment.activity_id}</p>
+					<dl class="activity-stats">
+						<div>
+							<dt class="stat-label">Participante</dt>
+							<dd class="stat-value stat-value--small">{enrollment.participant ?? enrollment.participant_id}</dd>
+						</div>
+						<div>
+							<dt class="stat-label">Fecha de inscripción</dt>
+							<dd class="stat-value stat-value--small">
+								{new Date(enrollment.enrolled_at).toLocaleString('es-AR', { dateStyle: 'medium', timeStyle: 'short' })}
+							</dd>
+						</div>
+					</dl>
+				</article>
+			))}
+		</div>
+	) : (
+		<div class="empty-state"><p>Todavía no hay inscripciones registradas.</p></div>
+	)}
+</section>

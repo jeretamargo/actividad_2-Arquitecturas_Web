@@ -1,0 +1,44 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = 'Actividades | TP de Arquitectura Web',
+	description = 'Listado de actividades disponibles.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="site-shell">
+			<header class="site-header">
+				<div class="header-inner">
+					<a class="brand" href="/" aria-label="Inicio">
+						<span class="brand-mark" aria-hidden="true">AW</span>
+						<span>Arquitectura Web</span>
+					</a>
+					<p class="header-note">Trabajo práctico · 2026</p>
+				</div>
+			</header>
+			<main>
+				<slot />
+			</main>
+		</div>
+	</body>
+</html>
+
+<style is:global>
+	@import '../styles/global.css';
+</style>

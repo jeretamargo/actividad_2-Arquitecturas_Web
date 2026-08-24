@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EnrollmentStatus from '../../components/EnrollmentStatus.astro';
+
+interface Activity {
+	id: string;
+	title: string;
+	starts_at: string;
+	capacity: number;
+	available_slots: number;
+}
+
+interface ActivitiesResponse {
+	data: Activity[];
+}
+
+interface ActivityResponse {
+	data: Activity;
+}
+
+export async function getStaticPaths() {
+	const response = await fetch(`${import.meta.env.VITE_FRONTEND_URL}/api/v1/activities/`);
+	const { data }: ActivitiesResponse = await response.json();
+
+	return data.map((activity) => ({
+		params: { id: activity.id },
+	}));
+}
+
+const { id } = Astro.params;
+const response = await fetch(`${import.meta.env.VITE_FRONTEND_URL}/api/v1/activities/${id}`);
+const { data: activity }: ActivityResponse = await response.json();
+---
+
+<Layout
+	title={`${activity.title} | TP de Arquitectura Web`}
+	description={`Detalle de la actividad ${activity.title}.`}
+>
+	<section class="content" aria-labelledby="activity-title">
+		<div class="detail-heading">
+			<a class="back-link" href="/">&larr; Volver a actividades</a>
+			<p class="eyebrow">Detalle de actividad</p>
+			<h1 id="activity-title">{activity.title}</h1>
+			<p class="lead">Información de horarios y disponibilidad de esta propuesta académica.</p>
+		</div>
+
+		<article class="detail-card">
+			<div class="detail-card__header">
+				<span class="detail-label">Actividad</span>
+				<div class="detail-card__meta">
+					<span class="content-origin">HTML inicial</span>
+					<span class="detail-status">Disponible</span>
+				</div>
+			</div>
+			<dl class="detail-stats">
+				<div>
+					<dt class="stat-label">Fecha de inicio</dt>
+					<dd class="detail-value">
+						{new Date(activity.starts_at).toLocaleString('es-AR', { dateStyle: 'long', timeStyle: 'short' })}
+					</dd>
+				</div>
+				<div>
+					<dt class="stat-label">Capacidad total</dt>
+					<dd class="detail-value">{activity.capacity} personas</dd>
+				</div>
+				<div>
+					<dt class="stat-label">Cupos disponibles</dt>
+					<dd class="detail-value detail-value--available">{activity.available_slots}</dd>
+				</div>
+			</dl>
+		</article>
+
+		<EnrollmentStatus activityId={activity.id} />
+	</section>
+</Layout>

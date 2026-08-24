@@ -1,0 +1,55 @@
+---
+export interface Activitie {
+    id:              string;
+    title:           string;
+    starts_at:       Date;
+    capacity:        number;
+    available_slots: number;
+}
+
+interface ActivitiesResponse {
+    data: Activitie[];
+}
+
+const { data }: ActivitiesResponse = await fetch(`${import.meta.env.VITE_FRONTEND_URL}/api/v1/activities/`).then((res) => res.json());
+---
+<section class="content" aria-labelledby="page-title">
+    <div class="page-actions">
+		<a class="button button-primary" href="/enrollments/">Ir a mis Inscripciones</a>
+	</div>
+	<div class="page-heading">
+		<p class="eyebrow">Agenda académica</p>
+		<h1 id="page-title">Actividades disponibles</h1>
+		<p class="lead">Consultá las propuestas, sus horarios y los cupos disponibles para organizar tu cursada.</p>
+	</div>
+
+	{data.length > 0 ? (
+		<div class="activities-grid">
+			{data.map((activity: Activitie) => (
+				<a class="activity-link" href={`/activities/${activity.id}/`} aria-label={`Ver detalle de ${activity.title}`}>
+					<article class="activity-card">
+						<h2>{activity.title}</h2>
+						<p class="activity-date">
+							Fecha de inicio
+							<strong>{new Date(activity.starts_at).toLocaleString('es-AR', { dateStyle: 'long', timeStyle: 'short' })}</strong>
+						</p>
+						<dl class="activity-stats">
+							<div>
+								<dt class="stat-label">Capacidad</dt>
+								<dd class="stat-value">{activity.capacity}</dd>
+							</div>
+							<div>
+								<dt class="stat-label">Cupos libres</dt>
+								<dd class="stat-value available">{activity.available_slots}</dd>
+							</div>
+						</dl>
+					</article>
+				</a>
+			))}
+		</div>
+	) : (
+		<div class="empty-state"><p>No hay actividades disponibles por el momento.</p></div>
+	)}
+
+	
+</section>
