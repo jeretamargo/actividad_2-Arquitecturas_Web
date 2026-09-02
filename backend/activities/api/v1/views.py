@@ -1,34 +1,21 @@
-from datetime import datetime
-from uuid import UUID
 
-from ninja import NinjaAPI, Schema
-from pydantic import Field
+from uuid import UUID
 
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, render
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_GET, require_http_methods
 
-from .models import Activity, Enrollment, Participant
-from .representations import (
+from ...models import Activity, Enrollment, Participant
+from ...representations import (
     serialize_activities,
     serialize_activity,
     serialize_enrollment,
     serialize_enrollments,
 )
 
-api = NinjaAPI(title="Activities API", version="1.0.0")
 
-class ActivityOut(Schema):
-    id: UUID = Field(description="Identificador único de la actividad.")
-    title: str = Field(description="Nombre visible de la actividad.")
-    starts_at: datetime = Field(description="Fecha en ISO 8601.", examples=["2026-03-27T17:00:00-03:00"])
-    capacity: int = Field(
-        ge=0,
-        description="Cantidad máxima de participantes.",
-        examples=[30],
-    
-    )
+
 
 
 DEMO_PARTICIPANT_ID = "e939e6dd-6180-449e-9347-853e6437be31"
@@ -38,7 +25,7 @@ def response_error(status, code, message):
     response["Access-Control-Allow-Origin"] = "*"
     return response
 
-@require_GET
+
 def activity_list(request):
     activities = Activity.objects.all()
     return render(
@@ -46,39 +33,7 @@ def activity_list(request):
         "activities/activity_list.html",
         {"activities": activities},
     )
-@api.get(
- "/activities",
- response=list[ActivityOut],
- tags=["Activities"],
- openapi_extra={
-  "responses": {
-    200: {
-        "content": {
-                "application/json": {
-                    "examples": {
-                        "activities": {
-                        "summary": "Una actividad disponible",
-                        "value": [{"capacity": 30}],
-                        }
-                    }
-                }
-            }
-        },
-        405: {
-                "headers": {
-                        "Allow": {
-                            "description": "Método HTTP admitido por al ruta",
-                            "schema":{
-                                "type": "string",
-                                "example": "GET"
-                            }
-                        }
-                    }
-                }
-    }
-  },
 
-)
 
 @require_GET
 def activity_api_list(request):

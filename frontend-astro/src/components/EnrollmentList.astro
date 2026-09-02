@@ -13,7 +13,7 @@ interface EnrollmentsResponse {
 }
 
 const { data }: EnrollmentsResponse = await fetch(
-	`${import.meta.env.VITE_FRONTEND_URL}/api/v1/enrollments/`,
+	`${import.meta.env.VITE_BACKEND_URL}/api/v1/enrollments/`,
 ).then((res) => res.json());
 ---
 
@@ -34,12 +34,12 @@ const { data }: EnrollmentsResponse = await fetch(
 		<div class="activities-grid">
 			{data.map((enrollment: Enrollment) => (
 				<article class="activity-card">
-					<div class="enrollment-id">Inscripción #{enrollment.id}</div>
-					<h2>Actividad</h2>
+					<div class="enrollment-id">ID de Inscripción #{enrollment.id}</div>
+					<h2>ID de Actividad</h2>
 					<p class="enrollment-reference">{enrollment.activity ?? enrollment.activity_id}</p>
 					<dl class="activity-stats">
 						<div>
-							<dt class="stat-label">Participante</dt>
+							<dt class="stat-label"> ID de Participante</dt>
 							<dd class="stat-value stat-value--small">{enrollment.participant ?? enrollment.participant_id}</dd>
 						</div>
 						<div>

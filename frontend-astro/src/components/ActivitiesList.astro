@@ -11,7 +11,7 @@ interface ActivitiesResponse {
     data: Activitie[];
 }
 
-const { data }: ActivitiesResponse = await fetch(`${import.meta.env.VITE_FRONTEND_URL}/api/v1/activities/`).then((res) => res.json());
+const { data }: ActivitiesResponse = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/activities/`).then((res) => res.json());
 ---
 <section class="content" aria-labelledby="page-title">
     <div class="page-actions">
