@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import EnrollmentStatus from '../../components/EnrollmentStatus.astro';
+import EnrollmentStatus from '../../components/EnrollmentStatus.tsx';
 
 interface Activity {
 	id: string;
@@ -70,6 +70,6 @@ const { data: activity }: ActivityResponse = await response.json();
 			</dl>
 		</article>
 
-		<EnrollmentStatus activityId={activity.id} />
+		<EnrollmentStatus client:load activityId={activity.id} apiUrl={import.meta.env.VITE_FRONTEND_URL} />
 	</section>
 </Layout>
