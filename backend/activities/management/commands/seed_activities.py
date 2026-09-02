@@ -125,17 +125,10 @@ class Command(BaseCommand):
             defaults = {key: value for key, value in participant.items() if key != "id"}
             Participant.objects.update_or_create(id=participant_id, defaults=defaults)
 
-        activities_by_id = {
-            activity.id: activity for activity in Activity.objects.all()
-        }
-        participants_by_id = {
-            participant.id: participant for participant in Participant.objects.all()
-        }
-
         for enrollment in ENROLLMENTS:
             Enrollment.objects.update_or_create(
-                activity_id=activities_by_id[enrollment["activity_id"]],
-                participant_id=participants_by_id[enrollment["participant_id"]],
+                activity_id=enrollment["activity_id"],
+                participant_id=enrollment["participant_id"],
             )
 
         self.stdout.write(
