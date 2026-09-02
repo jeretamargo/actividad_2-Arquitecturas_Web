@@ -16,5 +16,7 @@ urlpatterns = [
     path("me/enrollments/<uuid:enrollment_id>/", views.EnrollmentDetailView.as_view(), name="api-enrollment-detail")
     ,
     path("me/enrollments/create/<uuid:activity_id>/", views.EnrollmentCreateView.as_view(), name="api-enrollment-create")
-        ,
+    ,
+    path("me/enrollments/delete/<uuid:activity_id>/", views.EnrollmentDeleteView.as_view(), name="api-enrollment-delete")
+    ,
 ]
