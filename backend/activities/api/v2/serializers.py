@@ -24,3 +24,22 @@ class ActivityOutSerializer(serializers.Serializer):
         help_text="Cantidad máxima de participantes.",
     )
     availability = AvailabilitySerializer(source="*", read_only=True) # * en el atributo source le pasa al serializer la instancia de Activity
+
+class ParticipantDataSerializer(serializers.Serializer):
+    participant_id = serializers.UUIDField(
+            help_text="Participante de la inscripción."
+        )
+    enrolled_at = serializers.DateTimeField(
+            help_text="Fecha y hora de inscripción en formato ISO 8601."
+        )
+
+class EnrollmentOutSerializer(serializers.Serializer):
+    id = serializers.UUIDField(
+            help_text="Identificador único de la inscirpción"
+        )
+    activity_id = serializers.UUIDField(
+        help_text="Actividad en la que se inscribió."
+    )
+
+    participant = ParticipantDataSerializer(source="*", read_only=True)
+    

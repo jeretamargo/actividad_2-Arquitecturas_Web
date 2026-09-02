@@ -19,7 +19,7 @@ interface ActivityResponse {
 }
 
 export async function getStaticPaths() {
-	const response = await fetch(`${import.meta.env.VITE_FRONTEND_URL}/api/v1/activities/`);
+	const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/activities/`);
 	const { data }: ActivitiesResponse = await response.json();
 
 	return data.map((activity) => ({
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 }
 
 const { id } = Astro.params;
-const response = await fetch(`${import.meta.env.VITE_FRONTEND_URL}/api/v1/activities/${id}`);
+const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/activities/${id}`);
 const { data: activity }: ActivityResponse = await response.json();
 ---
 
@@ -70,6 +70,6 @@ const { data: activity }: ActivityResponse = await response.json();
 			</dl>
 		</article>
 
-		<EnrollmentStatus client:load activityId={activity.id} apiUrl={import.meta.env.VITE_FRONTEND_URL} />
+		<EnrollmentStatus client:load activityId={activity.id} apiUrl={import.meta.env.VITE_BACKEND_URL} />
 	</section>
 </Layout>
