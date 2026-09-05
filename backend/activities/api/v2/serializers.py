@@ -43,3 +43,6 @@ class EnrollmentOutSerializer(serializers.Serializer):
 
     participant = ParticipantDataSerializer(source="*", read_only=True)
     
+class ErrorSerializer(serializers.Serializer):
+    code = serializers.CharField()
+    message = serializers.CharField()

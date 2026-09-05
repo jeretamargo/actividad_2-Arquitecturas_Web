@@ -5,7 +5,7 @@ from django.db.models.aggregates import Count
 from drf_spectacular.types import OpenApiTypes
 from drf_spectacular.utils import OpenApiParameter, OpenApiResponse, extend_schema
 
-from . serializers import ActivityOutSerializer, EnrollmentOutSerializer
+from . serializers import ActivityOutSerializer, EnrollmentOutSerializer, ErrorSerializer
 from activities.models import Activity
 from activities.models import Enrollment
 
@@ -93,12 +93,12 @@ class ActivityDetailView(APIView):
         summary="Obtener actividad",
         description="Devuelve la actividad con el id especificado.",
         tags=["Activities"],
-        parameters=[ACTIVITY_ID_PARAMETER],
+        
         responses={
             200: ActivityOutSerializer,
             404: OpenApiResponse(
+                response=ErrorSerializer,
                 description=ACTIVITY_NOT_FOUND["message"],
-                response=ACTIVITY_NOT_FOUND,
             ),
             405: METHOD_NOT_ALLOWED,
         },
@@ -121,8 +121,13 @@ class EnrollmentListView(APIView):
             summary="Obtener inscripciones",
             description="Devuelve las inscirpciones del participante ",
             tags=["Enrollments"],
+            parameters=[ACTIVITY_ID_PARAMETER, PARTICIPANT_HEADER],
             responses={
                 200: EnrollmentOutSerializer,
+                401:  OpenApiResponse(
+                                response=ErrorSerializer,
+                                description=INVALID_IDENTITY["message"],
+                            ),
                 405: METHOD_NOT_ALLOWED,
             },
         )
@@ -139,22 +144,6 @@ class EnrollmentListView(APIView):
         serializer = EnrollmentOutSerializer(enrollments, many=True)
         return Response(serializer.data)
 
-class EnrollmentDetailView(APIView):
-    def get(self, request, enrollment_id):
-        
-        participant_id = get_participant_id(request)
-
-        if not participant_id:
-            return Response(
-                INVALID_IDENTITY,
-                status=status.HTTP_401_UNAUTHORIZED,
-            )
-        try:
-            enrollment = Enrollment.objects.get(id=enrollment_id)
-        except Enrollment.DoesNotExist:
-                return Response(ENROLLMENT_NOT_FOUND, status=status.HTTP_404_NOT_FOUND)
-        serializer = EnrollmentOutSerializer(enrollment)
-        return Response(serializer.data)
 
 class EnrollmentCreateView(APIView):
     @extend_schema(
@@ -165,13 +154,18 @@ class EnrollmentCreateView(APIView):
         parameters=[ACTIVITY_ID_PARAMETER, PARTICIPANT_HEADER],
         responses={
             200: EnrollmentOutSerializer,
+            201: EnrollmentOutSerializer,
+            401:  OpenApiResponse(
+                            response=ErrorSerializer,
+                            description=INVALID_IDENTITY["message"],
+                        ),
             404: OpenApiResponse(
+                response=ErrorSerializer,
                 description=ACTIVITY_NOT_FOUND["message"],
-                response=ACTIVITY_NOT_FOUND,
             ),
             409: OpenApiResponse(
+                response=ErrorSerializer,
                 description=CAPACITY_EXHAUSTED["message"],
-                response=CAPACITY_EXHAUSTED,
             ),
            
             405: METHOD_NOT_ALLOWED,
@@ -209,6 +203,10 @@ class EnrollmentDeleteView(APIView):
         tags=["Enrollments"],
         parameters=[ACTIVITY_ID_PARAMETER, PARTICIPANT_HEADER],
         responses={
+            401:  OpenApiResponse(
+                response=ErrorSerializer,
+                description=INVALID_IDENTITY["message"],
+            ),
             204: NO_CONTENT,
            
             405: METHOD_NOT_ALLOWED,

@@ -15,6 +15,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "activities",
+    "drf_spectacular",
 ]
 
 MIDDLEWARE = [
@@ -63,3 +64,12 @@ USE_TZ = True
 STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS":
+        "drf_spectacular.openapi.AutoSchema",
+}
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Activities API v2",
+    "DESCRIPTION": "Contrato HTTP de Activities API.",
+    "VERSION": "2.0.0",
+}
