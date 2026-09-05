@@ -1,7 +1,3 @@
-
-
-#DELETE /enrollments/<id>
-
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -37,10 +33,7 @@ REQUEST_NOT_VALID = {
     "code": "invalid_request",
     "message": "Los parámetros del request no son válidos.",
 }
-PARTICIPANT_ALREADY_ENROLLED = {
-    "code": "invalid_request",
-    "message": "El participante ya se encuentra inscripto en el curso",
-}
+
 
 ACTIVITY_ID_PARAMETER = OpenApiParameter(
     name="activity_id",
@@ -62,8 +55,18 @@ PARTICIPANT_HEADER = OpenApiParameter(
 
 METHOD_NOT_ALLOWED = OpenApiResponse(description="Método no permitido.")
 NO_CONTENT = OpenApiResponse(description="Inscripción cancelada.")
-
 DEMO_PARTICIPANT_ID = "e939e6dd-6180-449e-9347-853e6437be31"
+
+
+def get_participant_id(request):
+    participant_id = request.headers.get("X-Participant-ID")
+
+    if participant_id != DEMO_PARTICIPANT_ID:
+        return None
+
+    return participant_id
+
+
 
 class ActivityListView(APIView):
     @extend_schema(
@@ -77,11 +80,12 @@ class ActivityListView(APIView):
         },
     )
     def get(self, request):
+        
         activities = Activity.objects.annotate(
             enrolled_count=Count("enrollment")
         ).order_by("starts_at")
         serializer = ActivityOutSerializer(activities, many=True)
-        return Response({"data":serializer.data})
+        return Response(serializer.data)
 
 class ActivityDetailView(APIView):
     @extend_schema(
@@ -100,6 +104,8 @@ class ActivityDetailView(APIView):
         },
     )
     def get(self, request, activity_id):
+
+       
         try:
             activity = Activity.objects.annotate(
                 enrolled_count=Count("enrollment")
@@ -107,7 +113,7 @@ class ActivityDetailView(APIView):
         except Activity.DoesNotExist:
             return Response(ACTIVITY_NOT_FOUND, status=status.HTTP_404_NOT_FOUND)
         serializer = ActivityOutSerializer(activity)
-        return Response({"data":serializer.data})
+        return Response(serializer.data)
 
 class EnrollmentListView(APIView):
     @extend_schema(
@@ -121,18 +127,34 @@ class EnrollmentListView(APIView):
             },
         )
     def get(self, request):
-        enrollments = Enrollment.objects.filter(participant_id=DEMO_PARTICIPANT_ID);
+        participant_id = get_participant_id(request)
+
+        if not participant_id:
+            return Response(
+                INVALID_IDENTITY,
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
+
+        enrollments = Enrollment.objects.filter(participant_id=participant_id);
         serializer = EnrollmentOutSerializer(enrollments, many=True)
-        return Response({"data": serializer.data})
+        return Response(serializer.data)
 
 class EnrollmentDetailView(APIView):
     def get(self, request, enrollment_id):
+        
+        participant_id = get_participant_id(request)
+
+        if not participant_id:
+            return Response(
+                INVALID_IDENTITY,
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
         try:
             enrollment = Enrollment.objects.get(id=enrollment_id)
         except Enrollment.DoesNotExist:
                 return Response(ENROLLMENT_NOT_FOUND, status=status.HTTP_404_NOT_FOUND)
         serializer = EnrollmentOutSerializer(enrollment)
-        return Response({"data":serializer.data})
+        return Response(serializer.data)
 
 class EnrollmentCreateView(APIView):
     @extend_schema(
@@ -151,25 +173,33 @@ class EnrollmentCreateView(APIView):
                 description=CAPACITY_EXHAUSTED["message"],
                 response=CAPACITY_EXHAUSTED,
             ),
-            409: OpenApiResponse(
-                description=PARTICIPANT_ALREADY_ENROLLED["message"],
-                response=PARTICIPANT_ALREADY_ENROLLED,
-            ),
+           
             405: METHOD_NOT_ALLOWED,
         },
     )
     def put(self, request, activity_id):
+        participant_id = get_participant_id(request)
+
+        if not participant_id:
+            return Response(
+                INVALID_IDENTITY,
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
+
         try:
             activity = Activity.objects.get(id=activity_id)
         except Activity.DoesNotExist:
             return Response(ACTIVITY_NOT_FOUND, status=status.HTTP_404_NOT_FOUND)
+        
+        if(Enrollment.objects.filter(activity=activity, participant_id=participant_id).exists()):
+            enrollment = Enrollment.objects.get(activity=activity, participant_id=participant_id)
+            serializer = EnrollmentOutSerializer(enrollment)
+            return Response(serializer.data,status=status.HTTP_200_OK)
         if(activity.capacity <= Enrollment.objects.filter(activity=activity).count()):
-           return Response(CAPACITY_EXHAUSTED, status=status.HTTP_409_CONFLICT)
-        if(Enrollment.objects.filter(activity=activity, participant_id=DEMO_PARTICIPANT_ID).exists()):
-            return Response(PARTICIPANT_ALREADY_ENROLLED, status=status.HTTP_409_CONFLICT)
-        enrollment = Enrollment.objects.create(activity=activity, participant_id=DEMO_PARTICIPANT_ID)
+                   return Response(CAPACITY_EXHAUSTED, status=status.HTTP_409_CONFLICT)
+        enrollment = Enrollment.objects.create(activity=activity, participant_id=participant_id)
         serializer = EnrollmentOutSerializer(enrollment)
-        return Response({"data":serializer.data})
+        return Response(serializer.data,status=status.HTTP_201_CREATED)
 
 class EnrollmentDeleteView(APIView):
     @extend_schema(
@@ -180,22 +210,31 @@ class EnrollmentDeleteView(APIView):
         parameters=[ACTIVITY_ID_PARAMETER, PARTICIPANT_HEADER],
         responses={
             204: NO_CONTENT,
-            404: OpenApiResponse(
-                description=ENROLLMENT_NOT_FOUND["message"],
-                response=ENROLLMENT_NOT_FOUND,
-            ),
+           
             405: METHOD_NOT_ALLOWED,
         },
     )
     def delete(self, request, activity_id):
+        participant_id = get_participant_id(request)
+
+        if not participant_id:
+            return Response(
+                INVALID_IDENTITY,
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
+
         try:
             activity = Activity.objects.get(id=activity_id)
         except Activity.DoesNotExist:
-            return Response(ACTIVITY_NOT_FOUND, status=status.HTTP_404_NOT_FOUND)
+             return Response(
+                ACTIVITY_NOT_FOUND,     
+                status=status.HTTP_404_NOT_FOUND,
+                )
+
         try:
-            enrollment = Enrollment.objects.get(activity=activity, participant_id=DEMO_PARTICIPANT_ID)
+            enrollment = Enrollment.objects.get(activity=activity, participant_id=participant_id)
         except Enrollment.DoesNotExist:
-            return Response(ENROLLMENT_NOT_FOUND, status=status.HTTP_404_NOT_FOUND)
+            return Response(status=status.HTTP_204_NO_CONTENT)
         enrollment.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
