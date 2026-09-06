@@ -16,10 +16,10 @@ class CorrelationIdMiddleware:
         request.correlation_id = correlation_id
 
 
-        logger.info("Request received", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "list_activities"})
+        logger.info("request_received", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, })
 
         # Despues de ejecutar el view
         response = self.get_response(request)
         response["X-Correlation-ID"] = correlation_id
-
+        logger.info("request_completed", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, })
         return response

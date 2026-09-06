@@ -79,7 +79,7 @@ class ActivityListView(APIView):
         tags=["Activities"],
         responses={
             200: ActivityOutSerializer(many=True),
-            405: METHOD_NOT_ALLOWED,
+            405: METHOD_NOT_ALLOWED, 
         },
     )
     def get(self, request):
@@ -88,6 +88,7 @@ class ActivityListView(APIView):
             enrolled_count=Count("enrollment")
         ).order_by("starts_at")
         serializer = ActivityOutSerializer(activities, many=True)
+        logger.info("list_activities", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "list_activities", "result": "success"})
         return Response(serializer.data)
 
 class ActivityDetailView(APIView):
@@ -114,8 +115,10 @@ class ActivityDetailView(APIView):
                 enrolled_count=Count("enrollment")
             ).get(id=activity_id)
         except Activity.DoesNotExist:
+            logger.info("invalid_request", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "get_activity", "result": "not_found"})
             return Response(ACTIVITY_NOT_FOUND, status=status.HTTP_404_NOT_FOUND)
         serializer = ActivityOutSerializer(activity)
+        logger.info("get_activity", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "get_activity", "result": "success"})
         return Response(serializer.data)
 
 class EnrollmentListView(APIView):
@@ -138,6 +141,7 @@ class EnrollmentListView(APIView):
         participant_id = get_participant_id(request)
 
         if not participant_id:
+            logger.info("invalid_request", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "get_enrollments", "result": "invalid_participant"})
             return Response(
                 INVALID_IDENTITY,
                 status=status.HTTP_401_UNAUTHORIZED,
@@ -145,6 +149,7 @@ class EnrollmentListView(APIView):
 
         enrollments = Enrollment.objects.filter(participant_id=participant_id);
         serializer = EnrollmentOutSerializer(enrollments, many=True)
+        logger.info("get_enrollments", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "get_enrollments", "result": "success"})
         return Response(serializer.data)
 
 
@@ -178,6 +183,7 @@ class EnrollmentCreateView(APIView):
         participant_id = get_participant_id(request)
 
         if not participant_id:
+            logger.info("enrollment_rejected", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "create_enrollment", "result": "invalid_participant"})
             return Response(
                 INVALID_IDENTITY,
                 status=status.HTTP_401_UNAUTHORIZED,
@@ -186,16 +192,20 @@ class EnrollmentCreateView(APIView):
         try:
             activity = Activity.objects.get(id=activity_id)
         except Activity.DoesNotExist:
+            logger.info("enrollment_rejected", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "create_enrollment", "result": "activity_not_found"})
             return Response(ACTIVITY_NOT_FOUND, status=status.HTTP_404_NOT_FOUND)
         
         if(Enrollment.objects.filter(activity=activity, participant_id=participant_id).exists()):
             enrollment = Enrollment.objects.get(activity=activity, participant_id=participant_id)
             serializer = EnrollmentOutSerializer(enrollment)
+            logger.info("enrollment_reused", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "create_enrollment", "result": "already_exists"})
             return Response(serializer.data,status=status.HTTP_200_OK)
         if(activity.capacity <= Enrollment.objects.filter(activity=activity).count()):
+                   logger.info("enrollment_rejected", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "create_enrollment", "result": "capacity_exhausted"})
                    return Response(CAPACITY_EXHAUSTED, status=status.HTTP_409_CONFLICT)
         enrollment = Enrollment.objects.create(activity=activity, participant_id=participant_id)
         serializer = EnrollmentOutSerializer(enrollment)
+        logger.info("enrollment_created", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "create_enrollment", "result": "success"})
         return Response(serializer.data,status=status.HTTP_201_CREATED)
 
 class EnrollmentDeleteView(APIView):
@@ -219,6 +229,7 @@ class EnrollmentDeleteView(APIView):
         participant_id = get_participant_id(request)
 
         if not participant_id:
+            logger.info("enrollment_rejected", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "delete_enrollment", "result": "invalid_participant"})
             return Response(
                 INVALID_IDENTITY,
                 status=status.HTTP_401_UNAUTHORIZED,
@@ -227,6 +238,7 @@ class EnrollmentDeleteView(APIView):
         try:
             activity = Activity.objects.get(id=activity_id)
         except Activity.DoesNotExist:
+             logger.info("enrollment_rejected", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "delete_enrollment", "result": "activity_not_found"})
              return Response(
                 ACTIVITY_NOT_FOUND,     
                 status=status.HTTP_404_NOT_FOUND,
@@ -235,7 +247,10 @@ class EnrollmentDeleteView(APIView):
         try:
             enrollment = Enrollment.objects.get(activity=activity, participant_id=participant_id)
         except Enrollment.DoesNotExist:
+            logger.info("enrollment_reused", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "delete_enrollment", "result": "enrollment_not_found"})
+
             return Response(status=status.HTTP_204_NO_CONTENT)
         enrollment.delete()
+        logger.info("enrollment_deleted", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "delete_enrollment", "result": "success"})
         return Response(status=status.HTTP_204_NO_CONTENT)
 

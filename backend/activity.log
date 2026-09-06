@@ -1,1 +1,3 @@
-
+{"timestamp": "2026-09-06T12:28:54.179767-03:00", "level": "info", "message": "request_received", "correlation_id": "hola", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-09-06T12:28:54.181362-03:00", "level": "info", "message": "list_activities", "event": "list_activities", "correlation_id": "hola", "method": "GET", "path": "/api/v2/activities/", "result": "success"}
+{"timestamp": "2026-09-06T12:28:54.183132-03:00", "level": "info", "message": "request_completed", "correlation_id": "hola", "method": "GET", "path": "/api/v2/activities/"}

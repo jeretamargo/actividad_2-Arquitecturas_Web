@@ -3,7 +3,7 @@ import logging
 from datetime import datetime
 
 class JsonFormatter(logging.Formatter):
-    EXTRA_FIELDS=("event", "correlation_id", "method", "path")
+    EXTRA_FIELDS=("event", "correlation_id", "method", "path", "result")
 
 
     def format(self, record):
