@@ -8,6 +8,9 @@ from drf_spectacular.utils import OpenApiParameter, OpenApiResponse, extend_sche
 from . serializers import ActivityOutSerializer, EnrollmentOutSerializer, ErrorSerializer
 from activities.models import Activity
 from activities.models import Enrollment
+import logging
+
+logger = logging.getLogger("app.activities")
 
 ACTIVITY_NOT_FOUND = {
     "code": "activity_not_found",

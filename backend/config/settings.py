@@ -20,12 +20,14 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "config.middleware.CorrelationIdMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -72,4 +74,34 @@ SPECTACULAR_SETTINGS = {
     "TITLE": "Activities API v2",
     "DESCRIPTION": "Contrato HTTP de Activities API.",
     "VERSION": "2.0.0",
+}
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "json": {
+            "()": "config.logging.JsonFormatter",
+            
+        }
+    },
+    "handlers":{
+        "file": {
+            "level": "INFO",
+            "class": "logging.FileHandler",
+            "filename": "activity.log",
+            'formatter': 'json',
+        },
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'json',
+        },
+    },
+    "loggers": {
+        '': {
+            "handlers": ["file", "console"],
+            "level": "INFO",
+            "propagate": True,
+        },
+    }
 }
