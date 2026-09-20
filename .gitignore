@@ -13,3 +13,4 @@ frontend/dist/
 # Editors
 .idea/
 .vscode/
+.env
