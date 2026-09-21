@@ -1,35 +1,30 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import EnrollmentStatus from '../../components/EnrollmentStatus.tsx';
+import { participantId } from '../../config';
 
 interface Activity {
 	id: string;
 	title: string;
 	starts_at: string;
 	capacity: number;
-	available_slots: number;
-}
-
-interface ActivitiesResponse {
-	data: Activity[];
-}
-
-interface ActivityResponse {
-	data: Activity;
+	availability: {
+		available_slots: number;
+	};
 }
 
 export async function getStaticPaths() {
-	const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/activities/`);
-	const { data }: ActivitiesResponse = await response.json();
+	const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v2/activities/`);
+	const activities: Activity[] = await response.json();
 
-	return data.map((activity) => ({
+	return activities.map((activity) => ({
 		params: { id: activity.id },
 	}));
 }
 
 const { id } = Astro.params;
-const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/activities/${id}`);
-const { data: activity }: ActivityResponse = await response.json();
+const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v2/activities/${id}/`);
+const activity: Activity = await response.json();
 ---
 
 <Layout
@@ -65,11 +60,11 @@ const { data: activity }: ActivityResponse = await response.json();
 				</div>
 				<div>
 					<dt class="stat-label">Cupos disponibles</dt>
-					<dd class="detail-value detail-value--available">{activity.available_slots}</dd>
+					<dd class="detail-value detail-value--available">{activity.availability.available_slots}</dd>
 				</div>
 			</dl>
 		</article>
 
-		<EnrollmentStatus client:load activityId={activity.id} apiUrl={import.meta.env.VITE_BACKEND_URL} />
+		<EnrollmentStatus client:load activityId={activity.id} apiUrl={import.meta.env.VITE_BACKEND_URL} participantId={participantId} />
 	</section>
 </Layout>

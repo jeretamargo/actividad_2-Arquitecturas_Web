@@ -1,19 +1,18 @@
 ---
+import { participantId } from '../config';
+
 export interface Enrollment {
 	id: string;
-	activity?: string;
-	participant?: string;
-	activity_id?: string;
-	participant_id?: string;
-	enrolled_at: Date;
+	activity_id: string;
+	participant: {
+		participant_id: string;
+		enrolled_at: string;
+	};
 }
 
-interface EnrollmentsResponse {
-	data: Enrollment[];
-}
-
-const { data }: EnrollmentsResponse = await fetch(
-	`${import.meta.env.VITE_BACKEND_URL}/api/v1/enrollments/`,
+const enrollments: Enrollment[] = await fetch(
+	`${import.meta.env.VITE_BACKEND_URL}/api/v2/me/enrollments/`,
+	{ headers: { 'X-Participant-ID': participantId } },
 ).then((res) => res.json());
 ---
 
@@ -30,22 +29,22 @@ const { data }: EnrollmentsResponse = await fetch(
 	<div class="page-actions page-actions--back">
 		<a class="button button-secondary" href="/">Volver a actividades</a>
 	</div>
-	{data.length > 0 ? (
+	{enrollments.length > 0 ? (
 		<div class="activities-grid">
-			{data.map((enrollment: Enrollment) => (
+			{enrollments.map((enrollment: Enrollment) => (
 				<article class="activity-card">
 					<div class="enrollment-id">ID de Inscripción #{enrollment.id}</div>
 					<h2>ID de Actividad</h2>
-					<p class="enrollment-reference">{enrollment.activity ?? enrollment.activity_id}</p>
+					<p class="enrollment-reference">{enrollment.activity_id}</p>
 					<dl class="activity-stats">
 						<div>
 							<dt class="stat-label"> ID de Participante</dt>
-							<dd class="stat-value stat-value--small">{enrollment.participant ?? enrollment.participant_id}</dd>
+							<dd class="stat-value stat-value--small">{enrollment.participant.participant_id}</dd>
 						</div>
 						<div>
 							<dt class="stat-label">Fecha de inscripción</dt>
 							<dd class="stat-value stat-value--small">
-								{new Date(enrollment.enrolled_at).toLocaleString('es-AR', { dateStyle: 'medium', timeStyle: 'short' })}
+								{new Date(enrollment.participant.enrolled_at).toLocaleString('es-AR', { dateStyle: 'medium', timeStyle: 'short' })}
 							</dd>
 						</div>
 					</dl>

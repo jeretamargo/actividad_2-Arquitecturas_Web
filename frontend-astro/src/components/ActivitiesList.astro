@@ -2,16 +2,14 @@
 export interface Activitie {
     id:              string;
     title:           string;
-    starts_at:       Date;
+    starts_at:       string;
     capacity:        number;
-    available_slots: number;
+    availability: {
+        available_slots: number;
+    };
 }
 
-interface ActivitiesResponse {
-    data: Activitie[];
-}
-
-const { data }: ActivitiesResponse = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/activities/`).then((res) => res.json());
+const activities: Activitie[] = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v2/activities/`).then((res) => res.json());
 ---
 <section class="content" aria-labelledby="page-title">
     <div class="page-actions">
@@ -23,9 +21,9 @@ const { data }: ActivitiesResponse = await fetch(`${import.meta.env.VITE_BACKEND
 		<p class="lead">Consultá las propuestas, sus horarios y los cupos disponibles para organizar tu cursada.</p>
 	</div>
 
-	{data.length > 0 ? (
+	{activities.length > 0 ? (
 		<div class="activities-grid">
-			{data.map((activity: Activitie) => (
+			{activities.map((activity: Activitie) => (
 				<a class="activity-link" href={`/activities/${activity.id}/`} aria-label={`Ver detalle de ${activity.title}`}>
 					<article class="activity-card">
 						<h2>{activity.title}</h2>
@@ -40,7 +38,7 @@ const { data }: ActivitiesResponse = await fetch(`${import.meta.env.VITE_BACKEND
 							</div>
 							<div>
 								<dt class="stat-label">Cupos libres</dt>
-								<dd class="stat-value available">{activity.available_slots}</dd>
+								<dd class="stat-value available">{activity.availability.available_slots}</dd>
 							</div>
 						</dl>
 					</article>

@@ -1,11 +1,17 @@
 from pathlib import Path
 import os
+from corsheaders.defaults import default_headers
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = "django-insecure-clase-arquitecturas-web"
-DEBUG = True
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "backend"]
+DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
+ALLOWED_HOSTS = os.environ.get(
+    "ALLOWED_HOSTS",
+    "localhost,127.0.0.1",
+).split(",")
+CORS_ALLOWED_ORIGINS = ["http://localhost:4321", "http://127.0.0.1:4321"]
+CORS_ALLOW_HEADERS = (*default_headers, "x-participant-id")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -15,6 +21,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "corsheaders",
     "activities",
     "drf_spectacular",
     
@@ -22,6 +29,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "config.middleware.CorrelationIdMiddleware",

@@ -3,21 +3,19 @@ import { useEffect, useState } from 'react';
 interface Props {
 	activityId: string;
 	apiUrl: string;
+	participantId: string;
 }
 
 interface Enrollment {
-	activity?: string;
-	activity_id?: string;
-	enrolled_at?: string;
-}
-
-interface EnrollmentsResponse {
-	data: Enrollment[];
+	activity_id: string;
+	participant: {
+		enrolled_at: string;
+	};
 }
 
 type Status = 'loading' | 'available' | 'submitting' | 'enrolled' | 'error';
 
-export default function EnrollmentStatus({ activityId, apiUrl }: Props) {
+export default function EnrollmentStatus({ activityId, apiUrl, participantId }: Props) {
 	const [status, setStatus] = useState<Status>('loading');
 	const [message, setMessage] = useState('Consultando tus inscripciones...');
 	const [canEnroll, setCanEnroll] = useState(false);
@@ -28,16 +26,18 @@ export default function EnrollmentStatus({ activityId, apiUrl }: Props) {
 		async function getEnrollmentStatus() {
 			setCanEnroll(false);
 			try {
-				const response = await fetch(`${apiUrl}/api/v1/enrollments/`);
+				const response = await fetch(`${apiUrl}/api/v2/me/enrollments/`, {
+					headers: { 'X-Participant-ID': participantId },
+				});
 				if (!response.ok) throw new Error(`Request failed: ${response.status}`);
 
-				const { data }: EnrollmentsResponse = await response.json();
-				const enrollment = data.find((item) => (item.activity ?? item.activity_id) === activityId);
+				const enrollments: Enrollment[] = await response.json();
+				const enrollment = enrollments.find((item) => item.activity_id === activityId);
 				if (cancelled) return;
 
 				if (enrollment) {
-					const enrolledDate = enrollment.enrolled_at
-						? new Date(enrollment.enrolled_at).toLocaleDateString('es-AR', { dateStyle: 'medium' })
+					const enrolledDate = enrollment.participant.enrolled_at
+						? new Date(enrollment.participant.enrolled_at).toLocaleDateString('es-AR', { dateStyle: 'medium' })
 						: null;
 					setStatus('enrolled');
 					setMessage(enrolledDate
@@ -58,7 +58,7 @@ export default function EnrollmentStatus({ activityId, apiUrl }: Props) {
 
 		getEnrollmentStatus();
 		return () => { cancelled = true; };
-	}, [activityId, apiUrl]);
+	}, [activityId, apiUrl, participantId]);
 
 	async function enroll() {
 		setStatus('submitting');
@@ -66,10 +66,13 @@ export default function EnrollmentStatus({ activityId, apiUrl }: Props) {
 		setCanEnroll(false);
 
 		try {
-			const response = await fetch(`${apiUrl}/api/v1/me/enrollments/create/${activityId}`, { method: 'PUT' });
+			const response = await fetch(`${apiUrl}/api/v2/me/enrollments/create/${activityId}/`, {
+				method: 'PUT',
+				headers: { 'X-Participant-ID': participantId },
+			});
 			if (!response.ok) {
 				const errorPayload = await response.json().catch(() => null);
-				throw new Error(errorPayload?.error ?? 'No se pudo completar la inscripción.');
+				throw new Error(errorPayload?.message ?? 'No se pudo completar la inscripción.');
 			}
 
 			setStatus('enrolled');
