@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import EnrollmentStatus from '../../components/EnrollmentStatus.tsx';
-import { participantId } from '../../config';
+import { backendUrl, participantId } from '../../config';
 
 interface Activity {
 	id: string;
@@ -13,17 +13,18 @@ interface Activity {
 	};
 }
 
-export async function getStaticPaths() {
-	const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v2/activities/`);
-	const activities: Activity[] = await response.json();
+const { id } = Astro.params;
+if (!id) return new Response('Actividad no encontrada.', { status: 404 });
 
-	return activities.map((activity) => ({
-		params: { id: activity.id },
-	}));
+let response: Response;
+try {
+	response = await fetch(`${backendUrl}/api/v2/activities/${id}/`);
+} catch {
+	return new Response('No pudimos cargar la actividad.', { status: 502 });
 }
 
-const { id } = Astro.params;
-const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v2/activities/${id}/`);
+if (response.status === 404) return new Response('Actividad no encontrada.', { status: 404 });
+if (!response.ok) return new Response('No pudimos cargar la actividad.', { status: 502 });
 const activity: Activity = await response.json();
 ---
 
@@ -65,6 +66,6 @@ const activity: Activity = await response.json();
 			</dl>
 		</article>
 
-		<EnrollmentStatus client:load activityId={activity.id} apiUrl={import.meta.env.VITE_BACKEND_URL} participantId={participantId} />
+		<EnrollmentStatus client:load activityId={activity.id} participantId={participantId} />
 	</section>
 </Layout>

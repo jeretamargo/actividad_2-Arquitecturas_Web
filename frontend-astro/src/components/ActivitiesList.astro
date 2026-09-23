@@ -1,4 +1,6 @@
 ---
+import { backendUrl } from '../config';
+
 export interface Activitie {
     id:              string;
     title:           string;
@@ -9,7 +11,16 @@ export interface Activitie {
     };
 }
 
-const activities: Activitie[] = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v2/activities/`).then((res) => res.json());
+let activities: Activitie[] = [];
+let hasError = false;
+
+try {
+	const response = await fetch(`${backendUrl}/api/v2/activities/`);
+	if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+	activities = await response.json();
+} catch {
+	hasError = true;
+}
 ---
 <section class="content" aria-labelledby="page-title">
     <div class="page-actions">
@@ -21,7 +32,9 @@ const activities: Activitie[] = await fetch(`${import.meta.env.VITE_BACKEND_URL}
 		<p class="lead">Consultá las propuestas, sus horarios y los cupos disponibles para organizar tu cursada.</p>
 	</div>
 
-	{activities.length > 0 ? (
+	{hasError ? (
+		<div class="empty-state"><p>No pudimos cargar las actividades. Intentá nuevamente más tarde.</p></div>
+	) : activities.length > 0 ? (
 		<div class="activities-grid">
 			{activities.map((activity: Activitie) => (
 				<a class="activity-link" href={`/activities/${activity.id}/`} aria-label={`Ver detalle de ${activity.title}`}>

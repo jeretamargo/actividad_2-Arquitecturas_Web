@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 interface Props {
 	activityId: string;
-	apiUrl: string;
 	participantId: string;
 }
 
@@ -15,7 +14,7 @@ interface Enrollment {
 
 type Status = 'loading' | 'available' | 'submitting' | 'enrolled' | 'error';
 
-export default function EnrollmentStatus({ activityId, apiUrl, participantId }: Props) {
+export default function EnrollmentStatus({ activityId, participantId }: Props) {
 	const [status, setStatus] = useState<Status>('loading');
 	const [message, setMessage] = useState('Consultando tus inscripciones...');
 	const [canEnroll, setCanEnroll] = useState(false);
@@ -26,7 +25,7 @@ export default function EnrollmentStatus({ activityId, apiUrl, participantId }: 
 		async function getEnrollmentStatus() {
 			setCanEnroll(false);
 			try {
-				const response = await fetch(`${apiUrl}/api/v2/me/enrollments/`, {
+				const response = await fetch('/api/v2/me/enrollments/', {
 					headers: { 'X-Participant-ID': participantId },
 				});
 				if (!response.ok) throw new Error(`Request failed: ${response.status}`);
@@ -58,7 +57,7 @@ export default function EnrollmentStatus({ activityId, apiUrl, participantId }: 
 
 		getEnrollmentStatus();
 		return () => { cancelled = true; };
-	}, [activityId, apiUrl, participantId]);
+	}, [activityId, participantId]);
 
 	async function enroll() {
 		setStatus('submitting');
@@ -66,7 +65,7 @@ export default function EnrollmentStatus({ activityId, apiUrl, participantId }: 
 		setCanEnroll(false);
 
 		try {
-			const response = await fetch(`${apiUrl}/api/v2/me/enrollments/create/${activityId}/`, {
+			const response = await fetch(`/api/v2/me/enrollments/create/${activityId}/`, {
 				method: 'PUT',
 				headers: { 'X-Participant-ID': participantId },
 			});

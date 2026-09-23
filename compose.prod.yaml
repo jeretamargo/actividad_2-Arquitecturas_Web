@@ -1,10 +1,23 @@
 services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "127.0.0.1:8081:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d:ro
+    depends_on:
+      - frontend
+      - backend
+
   frontend:
     build:
       context: ./frontend-astro
       dockerfile: Dockerfile.prod
-    ports:
-      - "127.0.0.1:8080:80"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 4321
+      BACKEND_URL: http://backend:8000
+      PUBLIC_BACKEND_URL: ""
     depends_on:
       - backend
 
@@ -17,4 +30,4 @@ services:
       --bind 0.0.0.0:8000
     environment:
       DEBUG: "False"
-      ALLOWED_HOSTS: localhost,127.0.0.1
+      ALLOWED_HOSTS: localhost,127.0.0.1,backend

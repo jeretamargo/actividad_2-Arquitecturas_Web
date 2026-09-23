@@ -1,5 +1,5 @@
 ---
-import { participantId } from '../config';
+import { backendUrl, participantId } from '../config';
 
 export interface Enrollment {
 	id: string;
@@ -10,10 +10,18 @@ export interface Enrollment {
 	};
 }
 
-const enrollments: Enrollment[] = await fetch(
-	`${import.meta.env.VITE_BACKEND_URL}/api/v2/me/enrollments/`,
-	{ headers: { 'X-Participant-ID': participantId } },
-).then((res) => res.json());
+let enrollments: Enrollment[] = [];
+let hasError = false;
+
+try {
+	const response = await fetch(`${backendUrl}/api/v2/me/enrollments/`, {
+		headers: { 'X-Participant-ID': participantId },
+	});
+	if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+	enrollments = await response.json();
+} catch {
+	hasError = true;
+}
 ---
 
 <section class="content content--compact" aria-labelledby="enrollments-title">
@@ -29,7 +37,9 @@ const enrollments: Enrollment[] = await fetch(
 	<div class="page-actions page-actions--back">
 		<a class="button button-secondary" href="/">Volver a actividades</a>
 	</div>
-	{enrollments.length > 0 ? (
+	{hasError ? (
+		<div class="empty-state"><p>No pudimos cargar tus inscripciones. Intentá nuevamente más tarde.</p></div>
+	) : enrollments.length > 0 ? (
 		<div class="activities-grid">
 			{enrollments.map((enrollment: Enrollment) => (
 				<article class="activity-card">
