@@ -1,5 +1,5 @@
 import uuid
-
+from django.conf import settings
 from django.db import models
 
 
@@ -17,8 +17,21 @@ class Activity(models.Model):
         return self.title
 
 class Participant(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.UUIDField(
+        primary_key=True,
+        default=uuid.uuid4,
+        editable=False,
+    )
     name = models.CharField(max_length=160)
+
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.PROTECT,
+        related_name="participant",
+        null=True,
+        blank=True,
+    )
+
     class Meta:
         ordering = ("name",)
         verbose_name_plural = "participants"
@@ -40,4 +53,10 @@ class Enrollment (models.Model):
            )
        ]
    
-   
+
+class RevokedToken(models.Model):
+    jti = models.CharField(max_length=36, unique=True)
+    revoked_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.jti

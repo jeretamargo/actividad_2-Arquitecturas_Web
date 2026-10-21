@@ -13,9 +13,16 @@ urlpatterns = [
     ,
     path("me/enrollments/", views.EnrollmentListView.as_view(), name="api-enrollment-list")
     ,
-    
     path("me/enrollments/create/<uuid:activity_id>/", views.EnrollmentCreateView.as_view(), name="api-enrollment-create")
     ,
     path("me/enrollments/delete/<uuid:activity_id>/", views.EnrollmentDeleteView.as_view(), name="api-enrollment-delete")
+    ,
+    path("auth/csrf/", views.CsrfTokenView.as_view(), name="auth-csrf" )
+    ,
+    path("auth/login/", views.LoginView.as_view(), name="auth-login" )
+    ,
+    path("auth/refresh/", views.RefreshView.as_view(), name="auth-refresh" )
+    ,
+    path("auth/logout/", views.LogoutView.as_view(), name="auth-logout",)
     ,
 ]

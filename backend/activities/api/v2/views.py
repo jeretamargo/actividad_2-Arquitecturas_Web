@@ -9,6 +9,28 @@ from . serializers import ActivityOutSerializer, EnrollmentOutSerializer, ErrorS
 from activities.models import Activity
 from activities.models import Enrollment
 import logging
+import jwt
+from datetime import datetime, timedelta, timezone
+from django.conf import settings
+from uuid import uuid4
+from django.contrib.auth import authenticate
+from django.middleware.csrf import get_token
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_protect
+
+from rest_framework.permissions import AllowAny
+
+from activities.models import Participant
+from .serializers import LoginInSerializer
+from activities.authentication import AccessTokenAuthentication
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.exceptions import PermissionDenied
+from django.contrib.auth import get_user_model
+from django.core.exceptions import ValidationError
+from rest_framework.exceptions import AuthenticationFailed
+
+from activities.models import RevokedToken
+
 
 logger = logging.getLogger("app.activities")
 
@@ -45,32 +67,37 @@ ACTIVITY_ID_PARAMETER = OpenApiParameter(
     required=True,
     description="Identificador único de la actividad.",
 )
-PARTICIPANT_HEADER = OpenApiParameter(
-    name="X-Participant-ID",
-    type=str,
-    location=OpenApiParameter.HEADER,
-    required=True,
-    description=(
-        "UUID del participante de demostración. El comando seed_activities crea "
-        "a3d8c92e-4f1a-4e5b-8c7d-9e0f1a2b3c4d."
-    ),
-)
+
 
 METHOD_NOT_ALLOWED = OpenApiResponse(description="Método no permitido.")
 NO_CONTENT = OpenApiResponse(description="Inscripción cancelada.")
-DEMO_PARTICIPANT_ID = "e939e6dd-6180-449e-9347-853e6437be31"
+
 
 
 def get_participant_id(request):
-    participant_id = request.headers.get("X-Participant-ID")
+    try:
+        return request.user.participant.id
+    except Participant.DoesNotExist:
+        raise PermissionDenied(
+            "El usuario no tiene un participante asociado.",
+            code="participant_required",
+        )
 
-    if participant_id != DEMO_PARTICIPANT_ID:
-        return None
+class ParticipantAPIView(APIView):
+    authentication_classes = [AccessTokenAuthentication]
+    permission_classes = [IsAuthenticated]
 
-    return participant_id
+    def handle_exception(self, exc):
+        response = super().handle_exception(exc)
 
+        if response.status_code in (401, 403) and "detail" in response.data:
+            detail = response.data["detail"]
+            response.data = {
+                "code": getattr(detail, "code", "authentication_error"),
+                "message": str(detail),
+            }
 
-
+        return response
 class ActivityListView(APIView):
     @extend_schema(
         operation_id="listActivities",
@@ -121,13 +148,13 @@ class ActivityDetailView(APIView):
         logger.info("get_activity", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "get_activity", "result": "success"})
         return Response(serializer.data)
 
-class EnrollmentListView(APIView):
+class EnrollmentListView(ParticipantAPIView):
     @extend_schema(
             operation_id="getEnrollments",
             summary="Obtener inscripciones",
             description="Devuelve las inscirpciones del participante ",
             tags=["Enrollments"],
-            parameters=[ACTIVITY_ID_PARAMETER, PARTICIPANT_HEADER],
+            parameters=[ACTIVITY_ID_PARAMETER,],
             responses={
                 200: EnrollmentOutSerializer,
                 401:  OpenApiResponse(
@@ -153,13 +180,13 @@ class EnrollmentListView(APIView):
         return Response(serializer.data)
 
 
-class EnrollmentCreateView(APIView):
+class EnrollmentCreateView(ParticipantAPIView):
     @extend_schema(
         operation_id="createEnrollment",
         summary="Inscribirse en actividad",
         description="Crea una inscripción para el participante en la actividad especificada.",
         tags=["Enrollments"],
-        parameters=[ACTIVITY_ID_PARAMETER, PARTICIPANT_HEADER],
+        parameters=[ACTIVITY_ID_PARAMETER],
         responses={
             200: EnrollmentOutSerializer,
             201: EnrollmentOutSerializer,
@@ -208,13 +235,13 @@ class EnrollmentCreateView(APIView):
         logger.info("enrollment_created", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "create_enrollment", "result": "success"})
         return Response(serializer.data,status=status.HTTP_201_CREATED)
 
-class EnrollmentDeleteView(APIView):
+class EnrollmentDeleteView(ParticipantAPIView):
     @extend_schema(
         operation_id="deleteEnrollment",
         summary="Cancelar inscripción",
         description="Cancela la inscripción del participante en la actividad especificada.",
         tags=["Enrollments"],
-        parameters=[ACTIVITY_ID_PARAMETER, PARTICIPANT_HEADER],
+        parameters=[ACTIVITY_ID_PARAMETER],
         responses={
             401:  OpenApiResponse(
                 response=ErrorSerializer,
@@ -254,3 +281,198 @@ class EnrollmentDeleteView(APIView):
         logger.info("enrollment_deleted", extra={"correlation_id": request.correlation_id, "method": request.method, "path": request.path, "event": "delete_enrollment", "result": "success"})
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+def generate_access_token(user):
+    now = datetime.now(timezone.utc)
+
+    payload = {
+        "sub": str(user.id),
+        "username": user.username,
+        "type": "access",
+        "iat": now,
+        "exp": now + settings.ACCESS_TOKEN_LIFETIME,
+    }
+
+    return jwt.encode(
+        payload,
+        settings.JWT_SECRET,
+        algorithm=settings.JWT_ALGORITHM,
+    )
+
+def generate_refresh_token(user):
+    now = datetime.now(timezone.utc)
+
+    payload = {
+        "sub": str(user.id),
+        "type": "refresh",
+        "jti": str(uuid4()),
+        "iat": now,
+        "exp": now + settings.REFRESH_TOKEN_LIFETIME,
+    }
+
+    return jwt.encode(
+        payload,
+        settings.JWT_SECRET,
+        algorithm=settings.JWT_ALGORITHM,
+    )
+
+class CsrfTokenView(APIView):
+    authentication_classes = []
+    permission_classes = [AllowAny]
+
+    def get(self, request):
+        response = Response({
+            "csrf_token": get_token(request),
+        })
+        response["Cache-Control"] = "no-store"
+        return response
+
+
+@method_decorator(csrf_protect, name="dispatch")
+class LoginView(APIView):
+    authentication_classes = []
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        serializer = LoginInSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        user = authenticate(
+            request=request,
+            username=serializer.validated_data["username"],
+            password=serializer.validated_data["password"],
+        )
+
+        if user is None:
+            return Response(
+                {
+                    "code": "invalid_credentials",
+                    "message": "Usuario o contraseña incorrectos.",
+                },
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
+
+        if not Participant.objects.filter(user=user).exists():
+            return Response(
+                {
+                    "code": "participant_required",
+                    "message": "El usuario no tiene un participante asociado.",
+                },
+                status=status.HTTP_403_FORBIDDEN,
+            )
+
+        access_token = generate_access_token(user)
+        refresh_token = generate_refresh_token(user)
+
+        response = Response({
+            "access_token": access_token,
+            "token_type": "Bearer",
+            "expires_in": int(
+                settings.ACCESS_TOKEN_LIFETIME.total_seconds()
+            ),
+        })
+
+        response.set_cookie(
+            key="refresh_token",
+            value=refresh_token,
+            max_age=int(
+                settings.REFRESH_TOKEN_LIFETIME.total_seconds()
+            ),
+            httponly=True,
+            secure=settings.REFRESH_COOKIE_SECURE,
+            samesite="Lax",
+            path="/api/v2/auth/",
+        )
+        response["Cache-Control"] = "no-store"
+
+        return response
+    
+@method_decorator(csrf_protect, name="dispatch")
+class RefreshView(APIView):
+    authentication_classes = []
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        try:
+            payload = AccessTokenAuthentication().decode_refresh_token(
+                request.COOKIES.get("refresh_token")
+            )
+
+            if RevokedToken.objects.filter(jti=payload["jti"]).exists():
+                raise AuthenticationFailed(
+                    "El refresh token fue revocado.",
+                    code="refresh_revoked",
+                )
+
+            User = get_user_model()
+
+            try:
+                user = User.objects.get(
+                    pk=payload["sub"],
+                    is_active=True,
+                )
+            except (
+                User.DoesNotExist,
+                ValueError,
+                TypeError,
+                OverflowError,
+                ValidationError,
+            ):
+                raise AuthenticationFailed(
+                    "El usuario no existe o está inactivo.",
+                    code="invalid_user",
+                )
+
+            if not Participant.objects.filter(user=user).exists():
+                raise PermissionDenied(
+                    "El usuario no tiene un participante asociado.",
+                    code="participant_required",
+                )
+
+            response = Response({
+                "access_token": generate_access_token(user),
+                "token_type": "Bearer",
+                "expires_in": int(
+                    settings.ACCESS_TOKEN_LIFETIME.total_seconds()
+                ),
+            })
+
+        except (AuthenticationFailed, PermissionDenied) as exc:
+            response = Response(
+                {
+                    "code": exc.get_codes(),
+                    "message": str(exc.detail),
+                },
+                status=exc.status_code,
+            )
+
+        response["Cache-Control"] = "no-store"
+        return response
+
+@method_decorator(csrf_protect, name="dispatch")
+class LogoutView(APIView):
+    authentication_classes = []
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        token = request.COOKIES.get("refresh_token")
+
+        if token:
+            try:
+                payload = AccessTokenAuthentication().decode_refresh_token(
+                    token
+                )
+            except AuthenticationFailed:
+                pass
+            else:
+                RevokedToken.objects.get_or_create(
+                    jti=payload["jti"]
+                )
+
+        response = Response(status=status.HTTP_204_NO_CONTENT)
+        response.delete_cookie(
+            key="refresh_token",
+            path="/api/v2/auth/",
+            samesite="Lax",
+        )
+        response["Cache-Control"] = "no-store"
+        return response

@@ -229,3 +229,178 @@
 {"timestamp": "2026-09-20T19:26:22.909382-03:00", "level": "info", "message": "request_received", "correlation_id": "fe7f4184-ba4f-4861-8a4b-2c446f38c084", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/"}
 {"timestamp": "2026-09-20T19:26:22.916360-03:00", "level": "info", "message": "get_activity", "event": "get_activity", "correlation_id": "fe7f4184-ba4f-4861-8a4b-2c446f38c084", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/", "result": "success"}
 {"timestamp": "2026-09-20T19:26:22.916814-03:00", "level": "info", "message": "request_completed", "correlation_id": "fe7f4184-ba4f-4861-8a4b-2c446f38c084", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/"}
+{"timestamp": "2026-10-19T14:19:00.394207-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T14:19:12.581088-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:19:14.802853-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:19:17.067451-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:19:25.598138-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:19:26.143528-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:19:27.551494-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:19:28.681932-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:21:04.450909-03:00", "level": "info", "message": "/app/config/settings.py changed, reloading."}
+{"timestamp": "2026-10-19T14:21:05.104963-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T14:21:12.319899-03:00", "level": "info", "message": "/app/config/settings.py changed, reloading."}
+{"timestamp": "2026-10-19T14:21:12.996455-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T14:21:41.473646-03:00", "level": "info", "message": "request_received", "correlation_id": "334beeb1-e308-4def-98c0-37efcf8e7b12", "method": "GET", "path": "/"}
+{"timestamp": "2026-10-19T14:21:41.477457-03:00", "level": "info", "message": "request_completed", "correlation_id": "334beeb1-e308-4def-98c0-37efcf8e7b12", "method": "GET", "path": "/"}
+{"timestamp": "2026-10-19T14:21:41.478076-03:00", "level": "warning", "message": "Not Found: /"}
+{"timestamp": "2026-10-19T14:21:41.556601-03:00", "level": "info", "message": "request_received", "correlation_id": "ff44a618-25de-4b88-af7b-918117c7a091", "method": "GET", "path": "/favicon.ico"}
+{"timestamp": "2026-10-19T14:21:41.558876-03:00", "level": "info", "message": "request_completed", "correlation_id": "ff44a618-25de-4b88-af7b-918117c7a091", "method": "GET", "path": "/favicon.ico"}
+{"timestamp": "2026-10-19T14:21:41.559183-03:00", "level": "warning", "message": "Not Found: /favicon.ico"}
+{"timestamp": "2026-10-19T14:21:43.034667-03:00", "level": "info", "message": "request_received", "correlation_id": "48c7eb37-8e67-438f-b241-a8f1b89d27c8", "method": "GET", "path": "/"}
+{"timestamp": "2026-10-19T14:21:43.038827-03:00", "level": "info", "message": "request_completed", "correlation_id": "48c7eb37-8e67-438f-b241-a8f1b89d27c8", "method": "GET", "path": "/"}
+{"timestamp": "2026-10-19T14:21:43.039068-03:00", "level": "warning", "message": "Not Found: /"}
+{"timestamp": "2026-10-19T14:21:48.288747-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:21:49.332152-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:21:50.226301-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:23:56.257611-03:00", "level": "info", "message": "/app/config/settings.py changed, reloading."}
+{"timestamp": "2026-10-19T14:23:56.905310-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T14:24:02.042047-03:00", "level": "info", "message": "request_received", "correlation_id": "1ca386a7-11eb-48d1-b7b5-dfcf35ef962c", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-19T14:24:02.043648-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "1ca386a7-11eb-48d1-b7b5-dfcf35ef962c", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-19T14:24:02.055532-03:00", "level": "info", "message": "request_completed", "correlation_id": "1ca386a7-11eb-48d1-b7b5-dfcf35ef962c", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-19T14:24:03.503121-03:00", "level": "info", "message": "request_received", "correlation_id": "90b43824-82a4-47ea-b992-77e1dada5a65", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-19T14:24:03.503893-03:00", "level": "info", "message": "list_activities", "event": "list_activities", "correlation_id": "90b43824-82a4-47ea-b992-77e1dada5a65", "method": "GET", "path": "/api/v2/activities/", "result": "success"}
+{"timestamp": "2026-10-19T14:24:03.518448-03:00", "level": "info", "message": "request_completed", "correlation_id": "90b43824-82a4-47ea-b992-77e1dada5a65", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-19T14:24:08.865093-03:00", "level": "info", "message": "request_received", "correlation_id": "3efb7f1b-e84b-4210-90ac-c00250167a6c", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-19T14:24:08.865936-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "3efb7f1b-e84b-4210-90ac-c00250167a6c", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-19T14:24:08.875153-03:00", "level": "info", "message": "request_completed", "correlation_id": "3efb7f1b-e84b-4210-90ac-c00250167a6c", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-19T14:24:11.456847-03:00", "level": "info", "message": "request_received", "correlation_id": "351dcaa2-67a7-4b9e-a8b5-4762eac40416", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-19T14:24:11.457836-03:00", "level": "info", "message": "list_activities", "event": "list_activities", "correlation_id": "351dcaa2-67a7-4b9e-a8b5-4762eac40416", "method": "GET", "path": "/api/v2/activities/", "result": "success"}
+{"timestamp": "2026-10-19T14:24:11.469209-03:00", "level": "info", "message": "request_completed", "correlation_id": "351dcaa2-67a7-4b9e-a8b5-4762eac40416", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-19T14:25:48.370354-03:00", "level": "info", "message": "request_received", "correlation_id": "0ce36be6-1b39-49b5-938f-517d7473f20e", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/"}
+{"timestamp": "2026-10-19T14:25:48.379357-03:00", "level": "info", "message": "get_activity", "event": "get_activity", "correlation_id": "0ce36be6-1b39-49b5-938f-517d7473f20e", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/", "result": "success"}
+{"timestamp": "2026-10-19T14:25:48.379866-03:00", "level": "info", "message": "request_completed", "correlation_id": "0ce36be6-1b39-49b5-938f-517d7473f20e", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/"}
+{"timestamp": "2026-10-19T14:25:58.189815-03:00", "level": "info", "message": "request_received", "correlation_id": "c70a9c1d-1809-4021-8dca-3a147c09e246", "method": "GET", "path": "/api/v2/activities/6ccaf64f-d37e-4e6c-ae03-f3d6547bb297/"}
+{"timestamp": "2026-10-19T14:25:58.196619-03:00", "level": "info", "message": "get_activity", "event": "get_activity", "correlation_id": "c70a9c1d-1809-4021-8dca-3a147c09e246", "method": "GET", "path": "/api/v2/activities/6ccaf64f-d37e-4e6c-ae03-f3d6547bb297/", "result": "success"}
+{"timestamp": "2026-10-19T14:25:58.197065-03:00", "level": "info", "message": "request_completed", "correlation_id": "c70a9c1d-1809-4021-8dca-3a147c09e246", "method": "GET", "path": "/api/v2/activities/6ccaf64f-d37e-4e6c-ae03-f3d6547bb297/"}
+{"timestamp": "2026-10-19T14:26:20.068677-03:00", "level": "info", "message": "request_received", "correlation_id": "5699a122-1cb0-4548-8ea0-1b9148d16ca6", "method": "GET", "path": "/api/v2/activities/80c08526-3da1-4f0a-845c-740fa33f1f50/"}
+{"timestamp": "2026-10-19T14:26:20.075301-03:00", "level": "info", "message": "get_activity", "event": "get_activity", "correlation_id": "5699a122-1cb0-4548-8ea0-1b9148d16ca6", "method": "GET", "path": "/api/v2/activities/80c08526-3da1-4f0a-845c-740fa33f1f50/", "result": "success"}
+{"timestamp": "2026-10-19T14:26:20.075807-03:00", "level": "info", "message": "request_completed", "correlation_id": "5699a122-1cb0-4548-8ea0-1b9148d16ca6", "method": "GET", "path": "/api/v2/activities/80c08526-3da1-4f0a-845c-740fa33f1f50/"}
+{"timestamp": "2026-10-19T15:10:48.475313-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:12:11.234061-03:00", "level": "info", "message": "/app/config/settings.py changed, reloading."}
+{"timestamp": "2026-10-19T15:12:11.884583-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:25:27.175340-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-19T15:25:27.980070-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:26:04.518425-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:27:53.946099-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:28:39.533906-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-19T15:28:40.205083-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:38:15.523335-03:00", "level": "info", "message": "/app/activities/models.py changed, reloading."}
+{"timestamp": "2026-10-19T15:38:16.386073-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:40:00.202135-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:43:38.996684-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-19T15:43:39.813330-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:06:11.664413-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:09:22.108769-03:00", "level": "info", "message": "/app/activities/api/v2/serializers.py changed, reloading."}
+{"timestamp": "2026-10-21T16:09:22.768276-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:09:26.787541-03:00", "level": "info", "message": "request_received", "correlation_id": "b4c4e63b-d485-44c3-933c-4cdbc9111ec7", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T16:09:26.789634-03:00", "level": "info", "message": "request_completed", "correlation_id": "b4c4e63b-d485-44c3-933c-4cdbc9111ec7", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T16:10:55.017852-03:00", "level": "info", "message": "request_received", "correlation_id": "441c84ab-b9ed-40a8-b21c-b24a2ae0feda", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:10:55.154922-03:00", "level": "info", "message": "request_completed", "correlation_id": "441c84ab-b9ed-40a8-b21c-b24a2ae0feda", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:11:46.186506-03:00", "level": "info", "message": "request_received", "correlation_id": "37536910-7a32-4ed9-9d2d-23d2e820f7e9", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:11:46.189100-03:00", "level": "warning", "message": "Forbidden (CSRF token missing.): /api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:11:46.189368-03:00", "level": "info", "message": "request_completed", "correlation_id": "37536910-7a32-4ed9-9d2d-23d2e820f7e9", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:11:59.167405-03:00", "level": "info", "message": "request_received", "correlation_id": "7bf93c9d-1a68-4747-93a0-9a764977382f", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:11:59.304799-03:00", "level": "info", "message": "request_completed", "correlation_id": "7bf93c9d-1a68-4747-93a0-9a764977382f", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:12:14.738653-03:00", "level": "info", "message": "request_received", "correlation_id": "4ff5212f-c373-40a3-bb7f-5f890dac1ba3", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:12:14.872812-03:00", "level": "info", "message": "request_completed", "correlation_id": "4ff5212f-c373-40a3-bb7f-5f890dac1ba3", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:12:14.873062-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:12:22.592130-03:00", "level": "info", "message": "request_received", "correlation_id": "17138023-c683-4293-a7ed-cb4876b8daec", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:12:22.723080-03:00", "level": "info", "message": "request_completed", "correlation_id": "17138023-c683-4293-a7ed-cb4876b8daec", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:31:07.933283-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:31:08.880927-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:31:10.066191-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:31:10.702286-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:37:32.717020-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:37:33.719076-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:38:41.644417-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:38:42.505425-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:39:07.850302-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:39:08.491707-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:39:53.920934-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:39:54.541647-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:40:29.956354-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:40:30.607824-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:40:38.838294-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:40:39.506522-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:41:04.780854-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:41:05.446049-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:41:40.866800-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:41:41.556736-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:42:50.810727-03:00", "level": "info", "message": "request_received", "correlation_id": "c8384845-1e94-496e-966a-12e1d95e147b", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:50.813425-03:00", "level": "info", "message": "request_completed", "correlation_id": "c8384845-1e94-496e-966a-12e1d95e147b", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:50.814790-03:00", "level": "warning", "message": "Unauthorized: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:57.019379-03:00", "level": "info", "message": "request_received", "correlation_id": "fa45c4e6-a3fd-4b44-8a42-ce8a9112d4ac", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:57.020652-03:00", "level": "info", "message": "request_completed", "correlation_id": "fa45c4e6-a3fd-4b44-8a42-ce8a9112d4ac", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:57.021043-03:00", "level": "warning", "message": "Unauthorized: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:58.584088-03:00", "level": "info", "message": "request_received", "correlation_id": "80b3aa8a-787a-4184-81e2-bf20ba3d99da", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:58.584698-03:00", "level": "info", "message": "request_completed", "correlation_id": "80b3aa8a-787a-4184-81e2-bf20ba3d99da", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:58.584859-03:00", "level": "warning", "message": "Unauthorized: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:05.795701-03:00", "level": "info", "message": "request_received", "correlation_id": "c9ccb626-faff-4167-b98f-2d7c2e1ba360", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:43:05.926641-03:00", "level": "info", "message": "request_completed", "correlation_id": "c9ccb626-faff-4167-b98f-2d7c2e1ba360", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:43:20.417252-03:00", "level": "info", "message": "request_received", "correlation_id": "0a3268f8-485c-4ec1-825f-01ddb3a76fe2", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:20.425879-03:00", "level": "info", "message": "request_completed", "correlation_id": "0a3268f8-485c-4ec1-825f-01ddb3a76fe2", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:20.426171-03:00", "level": "warning", "message": "Method Not Allowed: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:25.610101-03:00", "level": "info", "message": "request_received", "correlation_id": "5f3b181a-e02f-4009-bd0a-e9950b73ad34", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:25.618546-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "5f3b181a-e02f-4009-bd0a-e9950b73ad34", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T16:43:25.628138-03:00", "level": "info", "message": "request_completed", "correlation_id": "5f3b181a-e02f-4009-bd0a-e9950b73ad34", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:40.678272-03:00", "level": "info", "message": "request_received", "correlation_id": "c84f648c-cffa-4e20-b9e7-b1fbada067bf", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:40.687923-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "c84f648c-cffa-4e20-b9e7-b1fbada067bf", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T16:43:40.689065-03:00", "level": "info", "message": "request_completed", "correlation_id": "c84f648c-cffa-4e20-b9e7-b1fbada067bf", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:41.388565-03:00", "level": "info", "message": "request_received", "correlation_id": "71fb62aa-b5e4-425a-bb57-f3a5742a89cc", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:41.397593-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "71fb62aa-b5e4-425a-bb57-f3a5742a89cc", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T16:43:41.399624-03:00", "level": "info", "message": "request_completed", "correlation_id": "71fb62aa-b5e4-425a-bb57-f3a5742a89cc", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:46:52.498620-03:00", "level": "info", "message": "/app/activities/models.py changed, reloading."}
+{"timestamp": "2026-10-21T16:46:53.433600-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:06:38.363154-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:06:39.049500-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:12:56.199657-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:12:57.120408-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:16:42.999149-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T17:16:43.906421-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:17:10.253078-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:17:10.922156-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:17:32.183263-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:17:32.815953-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:20:03.069921-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:20:03.925439-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:20:11.156427-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:20:11.767848-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:20:13.904899-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:20:14.561697-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:23:26.985373-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T17:23:27.623114-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:24:03.040433-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:24:03.809726-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:24:11.592869-03:00", "level": "info", "message": "request_received", "correlation_id": "6f3d7073-8dc9-4040-b1fd-a65a838b555d", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:24:11.596358-03:00", "level": "info", "message": "request_completed", "correlation_id": "6f3d7073-8dc9-4040-b1fd-a65a838b555d", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:24:11.597586-03:00", "level": "warning", "message": "Unauthorized: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:24:53.417945-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T17:24:54.103146-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:24:59.318346-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T17:25:00.002625-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:27:01.780818-03:00", "level": "info", "message": "request_received", "correlation_id": "3fb4b482-4e27-4443-91bc-dda5aa207525", "method": "GET", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:27:01.782932-03:00", "level": "info", "message": "request_completed", "correlation_id": "3fb4b482-4e27-4443-91bc-dda5aa207525", "method": "GET", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:27:01.783894-03:00", "level": "warning", "message": "Method Not Allowed: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:27:07.605788-03:00", "level": "info", "message": "request_received", "correlation_id": "c2cc3cdb-1597-4a4f-8a98-5067f6196051", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:27:07.618688-03:00", "level": "info", "message": "request_completed", "correlation_id": "c2cc3cdb-1597-4a4f-8a98-5067f6196051", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:28:40.680625-03:00", "level": "info", "message": "request_received", "correlation_id": "8af65f72-915a-4b41-b253-eca0c311b79c", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:28:40.681304-03:00", "level": "info", "message": "request_completed", "correlation_id": "8af65f72-915a-4b41-b253-eca0c311b79c", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:28:40.681484-03:00", "level": "warning", "message": "Unauthorized: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:29:14.677975-03:00", "level": "info", "message": "request_received", "correlation_id": "d9e90be7-4cdb-49df-8f08-bbaa10b2f45d", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:29:14.688731-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "d9e90be7-4cdb-49df-8f08-bbaa10b2f45d", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T17:29:14.691182-03:00", "level": "info", "message": "request_completed", "correlation_id": "d9e90be7-4cdb-49df-8f08-bbaa10b2f45d", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:36:13.350902-03:00", "level": "info", "message": "/app/activities/api/v2/urls.py changed, reloading."}
+{"timestamp": "2026-10-21T17:36:14.280554-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:36:56.751763-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T17:36:57.436264-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:37:01.609830-03:00", "level": "info", "message": "request_received", "correlation_id": "c4aa6bb7-11f2-41bc-a644-5931aa08a411", "method": "GET", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T17:37:01.612729-03:00", "level": "info", "message": "request_completed", "correlation_id": "c4aa6bb7-11f2-41bc-a644-5931aa08a411", "method": "GET", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T17:37:01.613727-03:00", "level": "warning", "message": "Method Not Allowed: /api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T17:37:06.393416-03:00", "level": "info", "message": "request_received", "correlation_id": "b366204d-e794-464b-b389-34e0dc0bc91b", "method": "POST", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T17:37:06.415455-03:00", "level": "info", "message": "request_completed", "correlation_id": "b366204d-e794-464b-b389-34e0dc0bc91b", "method": "POST", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T17:37:17.324562-03:00", "level": "info", "message": "request_received", "correlation_id": "8149cb3b-345c-4a38-8dee-3d47ff179d3d", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:37:17.325309-03:00", "level": "info", "message": "request_completed", "correlation_id": "8149cb3b-345c-4a38-8dee-3d47ff179d3d", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:37:17.325568-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:50:45.262916-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T17:50:45.974062-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
