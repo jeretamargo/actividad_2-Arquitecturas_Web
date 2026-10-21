@@ -2,7 +2,6 @@ from datetime import datetime
 from uuid import UUID
 
 from django.test import TestCase
-from django.urls import reverse
 from django.utils import timezone
 
 from .models import Activity
@@ -17,15 +16,18 @@ class ActivityListTests(TestCase):
             capacity=30,
         )
 
-        response = self.client.get(reverse("activities:list"))
+        response = self.client.get("/api/v2/activities/")
 
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, str(activity.id))
-        self.assertContains(response, activity.title)
-        self.assertContains(response, "2026-03-23T18:00:00-03:00")
-        self.assertContains(response, "30")
+        self.assertEqual(response.json(), [{
+            "id": str(activity.id),
+            "title": activity.title,
+            "starts_at": "2026-03-23T18:00:00-03:00",
+            "capacity": 30,
+            "availability": {"capacity": 30, "available_slots": 30},
+        }])
 
     def test_rejects_non_get_requests(self):
-        response = self.client.post(reverse("activities:list"))
+        response = self.client.post("/api/v2/activities/")
 
         self.assertEqual(response.status_code, 405)

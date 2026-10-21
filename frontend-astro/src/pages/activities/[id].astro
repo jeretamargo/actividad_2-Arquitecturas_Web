@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import EnrollmentStatus from '../../components/EnrollmentStatus.tsx';
-import { backendUrl, participantId } from '../../config';
+import { backendUrl } from '../../config';
 
 interface Activity {
 	id: string;
@@ -61,11 +61,13 @@ const activity: Activity = await response.json();
 				</div>
 				<div>
 					<dt class="stat-label">Cupos disponibles</dt>
-					<dd class="detail-value detail-value--available">{activity.availability.available_slots}</dd>
+					<dd class="detail-value detail-value--available" data-activity-availability={activity.id}>{activity.availability.available_slots}</dd>
 				</div>
 			</dl>
 		</article>
 
-		<EnrollmentStatus client:load activityId={activity.id} participantId={participantId} />
+		<EnrollmentStatus client:only="react" activityId={activity.id}>
+			<p slot="fallback">Cargando estado de inscripción…</p>
+		</EnrollmentStatus>
 	</section>
 </Layout>

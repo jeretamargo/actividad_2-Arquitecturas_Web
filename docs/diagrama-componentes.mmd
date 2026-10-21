@@ -1,0 +1,11 @@
+flowchart TB
+    B["Navegador · React dentro de Astro<br/>Access JWT: sólo memoria<br/>Refresh: cookie HttpOnly, 7 días"]
+    N["Nginx · entrada HTTP local :8081<br/>Conserva Host y puerto"]
+    F["Astro SSR · Node :4321<br/>HTML y recursos; React hidrata en el navegador"]
+    D["Gunicorn :8000 → Django + DRF + PyJWT<br/>Valida credenciales, firma, tipo y expiración<br/>sub → User → Participant; consulta jti revocado"]
+    P[("PostgreSQL :5432<br/>Usuarios + hashes, participantes, actividades,<br/>inscripciones y RevokedToken<br/>Volumen postgres_data")]
+    B -->|"HTTP: páginas, recursos y /api/v2/<br/>Bearer access; cookie sólo en /api/v2/auth/"| N
+    N -->|"Resto de rutas"| F
+    N -->|"/api/ → identidad y reglas del dominio"| D
+    F -->|"Red interna: GET de actividades públicas"| D
+    D -->|"ORM · consultas y persistencia"| P

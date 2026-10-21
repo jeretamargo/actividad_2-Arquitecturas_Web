@@ -1,13 +1,13 @@
 ---
-import EnrollmentList from '../components/EnrollmentList.astro';
-import Layout from '../layouts/Layout.astro';
+import EnrollmentList from "../components/EnrollmentList.tsx";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-	title="Mis inscripciones | TP de Arquitectura Web"
-	description="Consulta de inscripciones a actividades."
+  title="Mis inscripciones | TP de Arquitectura Web"
+  description="Consulta de inscripciones a actividades."
 >
-	
-	<EnrollmentList />
-	
+  <EnrollmentList client:only="react">
+    <p slot="fallback">Cargando inscripciones…</p>
+  </EnrollmentList>
 </Layout>
