@@ -1,4 +1,6 @@
 ---
+import SessionControls from '../components/SessionControls.tsx';
+
 interface Props {
 	title?: string;
 	description?: string;
@@ -29,7 +31,9 @@ const {
 						<span class="brand-mark" aria-hidden="true">AW</span>
 						<span>Arquitectura Web</span>
 					</a>
-					<p class="header-note">Trabajo práctico · 2026</p>
+					<SessionControls client:only="react">
+						<a slot="fallback" href="/login/">Ingresar</a>
+					</SessionControls>
 				</div>
 			</header>
 			<main>

@@ -1,6 +1,7 @@
 from pathlib import Path
 import os
 from corsheaders.defaults import default_headers
+from datetime import timedelta
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -8,7 +9,7 @@ SECRET_KEY = "django-insecure-clase-arquitecturas-web"
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 ALLOWED_HOSTS = os.environ.get(
     "ALLOWED_HOSTS",
-    "localhost,127.0.0.1",
+    "localhost,127.0.0.1,backend"
 ).split(",")
 CORS_ALLOWED_ORIGINS = ["http://localhost:4321", "http://127.0.0.1:4321"]
 CORS_ALLOW_HEADERS = (*default_headers, "x-participant-id")
@@ -119,3 +120,11 @@ LOGGING = {
         },
     }
 }
+JWT_SECRET = SECRET_KEY
+JWT_ALGORITHM = "HS256"
+
+ACCESS_TOKEN_LIFETIME = timedelta(minutes=10)
+REFRESH_TOKEN_LIFETIME = timedelta(days=7)
+REFRESH_COOKIE_SECURE = (
+    os.environ.get("REFRESH_COOKIE_SECURE", "False").lower() == "true"
+)

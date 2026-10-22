@@ -46,3 +46,10 @@ class EnrollmentOutSerializer(serializers.Serializer):
 class ErrorSerializer(serializers.Serializer):
     code = serializers.CharField()
     message = serializers.CharField()
+
+class LoginInSerializer(serializers.Serializer):
+    username = serializers.CharField(max_length=150)
+    password = serializers.CharField(
+        write_only=True,
+        trim_whitespace=False,
+    )

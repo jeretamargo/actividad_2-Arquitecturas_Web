@@ -229,3 +229,493 @@
 {"timestamp": "2026-09-20T19:26:22.909382-03:00", "level": "info", "message": "request_received", "correlation_id": "fe7f4184-ba4f-4861-8a4b-2c446f38c084", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/"}
 {"timestamp": "2026-09-20T19:26:22.916360-03:00", "level": "info", "message": "get_activity", "event": "get_activity", "correlation_id": "fe7f4184-ba4f-4861-8a4b-2c446f38c084", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/", "result": "success"}
 {"timestamp": "2026-09-20T19:26:22.916814-03:00", "level": "info", "message": "request_completed", "correlation_id": "fe7f4184-ba4f-4861-8a4b-2c446f38c084", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/"}
+{"timestamp": "2026-10-19T14:19:00.394207-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T14:19:12.581088-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:19:14.802853-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:19:17.067451-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:19:25.598138-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:19:26.143528-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:19:27.551494-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:19:28.681932-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:21:04.450909-03:00", "level": "info", "message": "/app/config/settings.py changed, reloading."}
+{"timestamp": "2026-10-19T14:21:05.104963-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T14:21:12.319899-03:00", "level": "info", "message": "/app/config/settings.py changed, reloading."}
+{"timestamp": "2026-10-19T14:21:12.996455-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T14:21:41.473646-03:00", "level": "info", "message": "request_received", "correlation_id": "334beeb1-e308-4def-98c0-37efcf8e7b12", "method": "GET", "path": "/"}
+{"timestamp": "2026-10-19T14:21:41.477457-03:00", "level": "info", "message": "request_completed", "correlation_id": "334beeb1-e308-4def-98c0-37efcf8e7b12", "method": "GET", "path": "/"}
+{"timestamp": "2026-10-19T14:21:41.478076-03:00", "level": "warning", "message": "Not Found: /"}
+{"timestamp": "2026-10-19T14:21:41.556601-03:00", "level": "info", "message": "request_received", "correlation_id": "ff44a618-25de-4b88-af7b-918117c7a091", "method": "GET", "path": "/favicon.ico"}
+{"timestamp": "2026-10-19T14:21:41.558876-03:00", "level": "info", "message": "request_completed", "correlation_id": "ff44a618-25de-4b88-af7b-918117c7a091", "method": "GET", "path": "/favicon.ico"}
+{"timestamp": "2026-10-19T14:21:41.559183-03:00", "level": "warning", "message": "Not Found: /favicon.ico"}
+{"timestamp": "2026-10-19T14:21:43.034667-03:00", "level": "info", "message": "request_received", "correlation_id": "48c7eb37-8e67-438f-b241-a8f1b89d27c8", "method": "GET", "path": "/"}
+{"timestamp": "2026-10-19T14:21:43.038827-03:00", "level": "info", "message": "request_completed", "correlation_id": "48c7eb37-8e67-438f-b241-a8f1b89d27c8", "method": "GET", "path": "/"}
+{"timestamp": "2026-10-19T14:21:43.039068-03:00", "level": "warning", "message": "Not Found: /"}
+{"timestamp": "2026-10-19T14:21:48.288747-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:21:49.332152-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:21:50.226301-03:00", "level": "error", "message": "Invalid HTTP_HOST header: 'backend:8000'. You may need to add 'backend' to ALLOWED_HOSTS."}
+{"timestamp": "2026-10-19T14:23:56.257611-03:00", "level": "info", "message": "/app/config/settings.py changed, reloading."}
+{"timestamp": "2026-10-19T14:23:56.905310-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T14:24:02.042047-03:00", "level": "info", "message": "request_received", "correlation_id": "1ca386a7-11eb-48d1-b7b5-dfcf35ef962c", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-19T14:24:02.043648-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "1ca386a7-11eb-48d1-b7b5-dfcf35ef962c", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-19T14:24:02.055532-03:00", "level": "info", "message": "request_completed", "correlation_id": "1ca386a7-11eb-48d1-b7b5-dfcf35ef962c", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-19T14:24:03.503121-03:00", "level": "info", "message": "request_received", "correlation_id": "90b43824-82a4-47ea-b992-77e1dada5a65", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-19T14:24:03.503893-03:00", "level": "info", "message": "list_activities", "event": "list_activities", "correlation_id": "90b43824-82a4-47ea-b992-77e1dada5a65", "method": "GET", "path": "/api/v2/activities/", "result": "success"}
+{"timestamp": "2026-10-19T14:24:03.518448-03:00", "level": "info", "message": "request_completed", "correlation_id": "90b43824-82a4-47ea-b992-77e1dada5a65", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-19T14:24:08.865093-03:00", "level": "info", "message": "request_received", "correlation_id": "3efb7f1b-e84b-4210-90ac-c00250167a6c", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-19T14:24:08.865936-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "3efb7f1b-e84b-4210-90ac-c00250167a6c", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-19T14:24:08.875153-03:00", "level": "info", "message": "request_completed", "correlation_id": "3efb7f1b-e84b-4210-90ac-c00250167a6c", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-19T14:24:11.456847-03:00", "level": "info", "message": "request_received", "correlation_id": "351dcaa2-67a7-4b9e-a8b5-4762eac40416", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-19T14:24:11.457836-03:00", "level": "info", "message": "list_activities", "event": "list_activities", "correlation_id": "351dcaa2-67a7-4b9e-a8b5-4762eac40416", "method": "GET", "path": "/api/v2/activities/", "result": "success"}
+{"timestamp": "2026-10-19T14:24:11.469209-03:00", "level": "info", "message": "request_completed", "correlation_id": "351dcaa2-67a7-4b9e-a8b5-4762eac40416", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-19T14:25:48.370354-03:00", "level": "info", "message": "request_received", "correlation_id": "0ce36be6-1b39-49b5-938f-517d7473f20e", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/"}
+{"timestamp": "2026-10-19T14:25:48.379357-03:00", "level": "info", "message": "get_activity", "event": "get_activity", "correlation_id": "0ce36be6-1b39-49b5-938f-517d7473f20e", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/", "result": "success"}
+{"timestamp": "2026-10-19T14:25:48.379866-03:00", "level": "info", "message": "request_completed", "correlation_id": "0ce36be6-1b39-49b5-938f-517d7473f20e", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/"}
+{"timestamp": "2026-10-19T14:25:58.189815-03:00", "level": "info", "message": "request_received", "correlation_id": "c70a9c1d-1809-4021-8dca-3a147c09e246", "method": "GET", "path": "/api/v2/activities/6ccaf64f-d37e-4e6c-ae03-f3d6547bb297/"}
+{"timestamp": "2026-10-19T14:25:58.196619-03:00", "level": "info", "message": "get_activity", "event": "get_activity", "correlation_id": "c70a9c1d-1809-4021-8dca-3a147c09e246", "method": "GET", "path": "/api/v2/activities/6ccaf64f-d37e-4e6c-ae03-f3d6547bb297/", "result": "success"}
+{"timestamp": "2026-10-19T14:25:58.197065-03:00", "level": "info", "message": "request_completed", "correlation_id": "c70a9c1d-1809-4021-8dca-3a147c09e246", "method": "GET", "path": "/api/v2/activities/6ccaf64f-d37e-4e6c-ae03-f3d6547bb297/"}
+{"timestamp": "2026-10-19T14:26:20.068677-03:00", "level": "info", "message": "request_received", "correlation_id": "5699a122-1cb0-4548-8ea0-1b9148d16ca6", "method": "GET", "path": "/api/v2/activities/80c08526-3da1-4f0a-845c-740fa33f1f50/"}
+{"timestamp": "2026-10-19T14:26:20.075301-03:00", "level": "info", "message": "get_activity", "event": "get_activity", "correlation_id": "5699a122-1cb0-4548-8ea0-1b9148d16ca6", "method": "GET", "path": "/api/v2/activities/80c08526-3da1-4f0a-845c-740fa33f1f50/", "result": "success"}
+{"timestamp": "2026-10-19T14:26:20.075807-03:00", "level": "info", "message": "request_completed", "correlation_id": "5699a122-1cb0-4548-8ea0-1b9148d16ca6", "method": "GET", "path": "/api/v2/activities/80c08526-3da1-4f0a-845c-740fa33f1f50/"}
+{"timestamp": "2026-10-19T15:10:48.475313-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:12:11.234061-03:00", "level": "info", "message": "/app/config/settings.py changed, reloading."}
+{"timestamp": "2026-10-19T15:12:11.884583-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:25:27.175340-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-19T15:25:27.980070-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:26:04.518425-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:27:53.946099-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:28:39.533906-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-19T15:28:40.205083-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:38:15.523335-03:00", "level": "info", "message": "/app/activities/models.py changed, reloading."}
+{"timestamp": "2026-10-19T15:38:16.386073-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:40:00.202135-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-19T15:43:38.996684-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-19T15:43:39.813330-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:06:11.664413-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:09:22.108769-03:00", "level": "info", "message": "/app/activities/api/v2/serializers.py changed, reloading."}
+{"timestamp": "2026-10-21T16:09:22.768276-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:09:26.787541-03:00", "level": "info", "message": "request_received", "correlation_id": "b4c4e63b-d485-44c3-933c-4cdbc9111ec7", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T16:09:26.789634-03:00", "level": "info", "message": "request_completed", "correlation_id": "b4c4e63b-d485-44c3-933c-4cdbc9111ec7", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T16:10:55.017852-03:00", "level": "info", "message": "request_received", "correlation_id": "441c84ab-b9ed-40a8-b21c-b24a2ae0feda", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:10:55.154922-03:00", "level": "info", "message": "request_completed", "correlation_id": "441c84ab-b9ed-40a8-b21c-b24a2ae0feda", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:11:46.186506-03:00", "level": "info", "message": "request_received", "correlation_id": "37536910-7a32-4ed9-9d2d-23d2e820f7e9", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:11:46.189100-03:00", "level": "warning", "message": "Forbidden (CSRF token missing.): /api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:11:46.189368-03:00", "level": "info", "message": "request_completed", "correlation_id": "37536910-7a32-4ed9-9d2d-23d2e820f7e9", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:11:59.167405-03:00", "level": "info", "message": "request_received", "correlation_id": "7bf93c9d-1a68-4747-93a0-9a764977382f", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:11:59.304799-03:00", "level": "info", "message": "request_completed", "correlation_id": "7bf93c9d-1a68-4747-93a0-9a764977382f", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:12:14.738653-03:00", "level": "info", "message": "request_received", "correlation_id": "4ff5212f-c373-40a3-bb7f-5f890dac1ba3", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:12:14.872812-03:00", "level": "info", "message": "request_completed", "correlation_id": "4ff5212f-c373-40a3-bb7f-5f890dac1ba3", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:12:14.873062-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:12:22.592130-03:00", "level": "info", "message": "request_received", "correlation_id": "17138023-c683-4293-a7ed-cb4876b8daec", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:12:22.723080-03:00", "level": "info", "message": "request_completed", "correlation_id": "17138023-c683-4293-a7ed-cb4876b8daec", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:31:07.933283-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:31:08.880927-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:31:10.066191-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:31:10.702286-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:37:32.717020-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:37:33.719076-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:38:41.644417-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:38:42.505425-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:39:07.850302-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:39:08.491707-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:39:53.920934-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:39:54.541647-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:40:29.956354-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:40:30.607824-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:40:38.838294-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:40:39.506522-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:41:04.780854-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:41:05.446049-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:41:40.866800-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T16:41:41.556736-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T16:42:50.810727-03:00", "level": "info", "message": "request_received", "correlation_id": "c8384845-1e94-496e-966a-12e1d95e147b", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:50.813425-03:00", "level": "info", "message": "request_completed", "correlation_id": "c8384845-1e94-496e-966a-12e1d95e147b", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:50.814790-03:00", "level": "warning", "message": "Unauthorized: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:57.019379-03:00", "level": "info", "message": "request_received", "correlation_id": "fa45c4e6-a3fd-4b44-8a42-ce8a9112d4ac", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:57.020652-03:00", "level": "info", "message": "request_completed", "correlation_id": "fa45c4e6-a3fd-4b44-8a42-ce8a9112d4ac", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:57.021043-03:00", "level": "warning", "message": "Unauthorized: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:58.584088-03:00", "level": "info", "message": "request_received", "correlation_id": "80b3aa8a-787a-4184-81e2-bf20ba3d99da", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:58.584698-03:00", "level": "info", "message": "request_completed", "correlation_id": "80b3aa8a-787a-4184-81e2-bf20ba3d99da", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:42:58.584859-03:00", "level": "warning", "message": "Unauthorized: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:05.795701-03:00", "level": "info", "message": "request_received", "correlation_id": "c9ccb626-faff-4167-b98f-2d7c2e1ba360", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:43:05.926641-03:00", "level": "info", "message": "request_completed", "correlation_id": "c9ccb626-faff-4167-b98f-2d7c2e1ba360", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T16:43:20.417252-03:00", "level": "info", "message": "request_received", "correlation_id": "0a3268f8-485c-4ec1-825f-01ddb3a76fe2", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:20.425879-03:00", "level": "info", "message": "request_completed", "correlation_id": "0a3268f8-485c-4ec1-825f-01ddb3a76fe2", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:20.426171-03:00", "level": "warning", "message": "Method Not Allowed: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:25.610101-03:00", "level": "info", "message": "request_received", "correlation_id": "5f3b181a-e02f-4009-bd0a-e9950b73ad34", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:25.618546-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "5f3b181a-e02f-4009-bd0a-e9950b73ad34", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T16:43:25.628138-03:00", "level": "info", "message": "request_completed", "correlation_id": "5f3b181a-e02f-4009-bd0a-e9950b73ad34", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:40.678272-03:00", "level": "info", "message": "request_received", "correlation_id": "c84f648c-cffa-4e20-b9e7-b1fbada067bf", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:40.687923-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "c84f648c-cffa-4e20-b9e7-b1fbada067bf", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T16:43:40.689065-03:00", "level": "info", "message": "request_completed", "correlation_id": "c84f648c-cffa-4e20-b9e7-b1fbada067bf", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:41.388565-03:00", "level": "info", "message": "request_received", "correlation_id": "71fb62aa-b5e4-425a-bb57-f3a5742a89cc", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:43:41.397593-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "71fb62aa-b5e4-425a-bb57-f3a5742a89cc", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T16:43:41.399624-03:00", "level": "info", "message": "request_completed", "correlation_id": "71fb62aa-b5e4-425a-bb57-f3a5742a89cc", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T16:46:52.498620-03:00", "level": "info", "message": "/app/activities/models.py changed, reloading."}
+{"timestamp": "2026-10-21T16:46:53.433600-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:06:38.363154-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:06:39.049500-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:12:56.199657-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:12:57.120408-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:16:42.999149-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T17:16:43.906421-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:17:10.253078-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:17:10.922156-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:17:32.183263-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:17:32.815953-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:20:03.069921-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:20:03.925439-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:20:11.156427-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:20:11.767848-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:20:13.904899-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:20:14.561697-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:23:26.985373-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T17:23:27.623114-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:24:03.040433-03:00", "level": "info", "message": "/app/activities/authentication.py changed, reloading."}
+{"timestamp": "2026-10-21T17:24:03.809726-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:24:11.592869-03:00", "level": "info", "message": "request_received", "correlation_id": "6f3d7073-8dc9-4040-b1fd-a65a838b555d", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:24:11.596358-03:00", "level": "info", "message": "request_completed", "correlation_id": "6f3d7073-8dc9-4040-b1fd-a65a838b555d", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:24:11.597586-03:00", "level": "warning", "message": "Unauthorized: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:24:53.417945-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T17:24:54.103146-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:24:59.318346-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T17:25:00.002625-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:27:01.780818-03:00", "level": "info", "message": "request_received", "correlation_id": "3fb4b482-4e27-4443-91bc-dda5aa207525", "method": "GET", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:27:01.782932-03:00", "level": "info", "message": "request_completed", "correlation_id": "3fb4b482-4e27-4443-91bc-dda5aa207525", "method": "GET", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:27:01.783894-03:00", "level": "warning", "message": "Method Not Allowed: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:27:07.605788-03:00", "level": "info", "message": "request_received", "correlation_id": "c2cc3cdb-1597-4a4f-8a98-5067f6196051", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:27:07.618688-03:00", "level": "info", "message": "request_completed", "correlation_id": "c2cc3cdb-1597-4a4f-8a98-5067f6196051", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:28:40.680625-03:00", "level": "info", "message": "request_received", "correlation_id": "8af65f72-915a-4b41-b253-eca0c311b79c", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:28:40.681304-03:00", "level": "info", "message": "request_completed", "correlation_id": "8af65f72-915a-4b41-b253-eca0c311b79c", "method": "POST", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:28:40.681484-03:00", "level": "warning", "message": "Unauthorized: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:29:14.677975-03:00", "level": "info", "message": "request_received", "correlation_id": "d9e90be7-4cdb-49df-8f08-bbaa10b2f45d", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:29:14.688731-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "d9e90be7-4cdb-49df-8f08-bbaa10b2f45d", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T17:29:14.691182-03:00", "level": "info", "message": "request_completed", "correlation_id": "d9e90be7-4cdb-49df-8f08-bbaa10b2f45d", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T17:36:13.350902-03:00", "level": "info", "message": "/app/activities/api/v2/urls.py changed, reloading."}
+{"timestamp": "2026-10-21T17:36:14.280554-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:36:56.751763-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T17:36:57.436264-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T17:37:01.609830-03:00", "level": "info", "message": "request_received", "correlation_id": "c4aa6bb7-11f2-41bc-a644-5931aa08a411", "method": "GET", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T17:37:01.612729-03:00", "level": "info", "message": "request_completed", "correlation_id": "c4aa6bb7-11f2-41bc-a644-5931aa08a411", "method": "GET", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T17:37:01.613727-03:00", "level": "warning", "message": "Method Not Allowed: /api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T17:37:06.393416-03:00", "level": "info", "message": "request_received", "correlation_id": "b366204d-e794-464b-b389-34e0dc0bc91b", "method": "POST", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T17:37:06.415455-03:00", "level": "info", "message": "request_completed", "correlation_id": "b366204d-e794-464b-b389-34e0dc0bc91b", "method": "POST", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T17:37:17.324562-03:00", "level": "info", "message": "request_received", "correlation_id": "8149cb3b-345c-4a38-8dee-3d47ff179d3d", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:37:17.325309-03:00", "level": "info", "message": "request_completed", "correlation_id": "8149cb3b-345c-4a38-8dee-3d47ff179d3d", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:37:17.325568-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T17:50:45.262916-03:00", "level": "info", "message": "/app/activities/api/v2/views.py changed, reloading."}
+{"timestamp": "2026-10-21T17:50:45.974062-03:00", "level": "info", "message": "Watching for file changes with StatReloader"}
+{"timestamp": "2026-10-21T18:14:35.872802-03:00", "level": "info", "message": "request_received", "correlation_id": "69164f59-222c-4d09-8f78-801bf9cf537a", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:14:35.891178-03:00", "level": "info", "message": "request_completed", "correlation_id": "69164f59-222c-4d09-8f78-801bf9cf537a", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:29:28.411181-03:00", "level": "info", "message": "request_received", "correlation_id": "9b4a39ff-fa4d-4a4b-b16a-e5974fec5ec1", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:29:28.413493-03:00", "level": "info", "message": "request_completed", "correlation_id": "9b4a39ff-fa4d-4a4b-b16a-e5974fec5ec1", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:29:28.468629-03:00", "level": "info", "message": "request_received", "correlation_id": "246214f6-595a-4cf4-88c8-9cfb23f1ae9b", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T18:29:28.608871-03:00", "level": "info", "message": "request_completed", "correlation_id": "246214f6-595a-4cf4-88c8-9cfb23f1ae9b", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T18:29:35.142977-03:00", "level": "info", "message": "request_received", "correlation_id": "68055692-4c54-45fe-9f33-a48fc7060ffd", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:29:35.144100-03:00", "level": "info", "message": "list_activities", "event": "list_activities", "correlation_id": "68055692-4c54-45fe-9f33-a48fc7060ffd", "method": "GET", "path": "/api/v2/activities/", "result": "success"}
+{"timestamp": "2026-10-21T18:29:35.158859-03:00", "level": "info", "message": "request_completed", "correlation_id": "68055692-4c54-45fe-9f33-a48fc7060ffd", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:29:38.858538-03:00", "level": "info", "message": "request_received", "correlation_id": "7e259a3a-2d36-415d-a4ac-d3b15c3566f0", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:29:38.859226-03:00", "level": "info", "message": "request_completed", "correlation_id": "7e259a3a-2d36-415d-a4ac-d3b15c3566f0", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:29:38.860522-03:00", "level": "warning", "message": "Unauthorized: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:29:41.317549-03:00", "level": "info", "message": "request_received", "correlation_id": "64d346d8-9c11-4e03-926e-417bb0048251", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:29:41.318249-03:00", "level": "info", "message": "list_activities", "event": "list_activities", "correlation_id": "64d346d8-9c11-4e03-926e-417bb0048251", "method": "GET", "path": "/api/v2/activities/", "result": "success"}
+{"timestamp": "2026-10-21T18:29:41.329784-03:00", "level": "info", "message": "request_completed", "correlation_id": "64d346d8-9c11-4e03-926e-417bb0048251", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:29:45.178934-03:00", "level": "info", "message": "request_received", "correlation_id": "0382d896-bd46-4fab-ba5c-50fa025c759e", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:29:45.179784-03:00", "level": "info", "message": "request_completed", "correlation_id": "0382d896-bd46-4fab-ba5c-50fa025c759e", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:29:45.180075-03:00", "level": "warning", "message": "Unauthorized: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:29:52.654445-03:00", "level": "info", "message": "request_received", "correlation_id": "fd476ff8-cb32-4f29-8836-60aae72e08b9", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:29:52.655119-03:00", "level": "info", "message": "list_activities", "event": "list_activities", "correlation_id": "fd476ff8-cb32-4f29-8836-60aae72e08b9", "method": "GET", "path": "/api/v2/activities/", "result": "success"}
+{"timestamp": "2026-10-21T18:29:52.665040-03:00", "level": "info", "message": "request_completed", "correlation_id": "fd476ff8-cb32-4f29-8836-60aae72e08b9", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:29:55.169054-03:00", "level": "info", "message": "request_received", "correlation_id": "7d15fba0-e8bc-4ccc-9b58-304397e73e7d", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:29:55.169751-03:00", "level": "info", "message": "request_completed", "correlation_id": "7d15fba0-e8bc-4ccc-9b58-304397e73e7d", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:29:55.170022-03:00", "level": "warning", "message": "Unauthorized: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:40:27.139281-03:00", "level": "info", "message": "request_received", "correlation_id": "c07d14be-3b22-4c15-bf98-52b9ce0abe11", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:40:27.140730-03:00", "level": "info", "message": "request_completed", "correlation_id": "c07d14be-3b22-4c15-bf98-52b9ce0abe11", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:40:27.147473-03:00", "level": "info", "message": "request_received", "correlation_id": "d687699e-74a5-41cc-8c11-c9ddffa49e16", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T18:40:27.279690-03:00", "level": "info", "message": "request_completed", "correlation_id": "d687699e-74a5-41cc-8c11-c9ddffa49e16", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T18:40:29.517835-03:00", "level": "info", "message": "request_received", "correlation_id": "54b522e6-8243-4646-9b65-ddefad8f03b1", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:40:29.518430-03:00", "level": "info", "message": "request_completed", "correlation_id": "54b522e6-8243-4646-9b65-ddefad8f03b1", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:40:29.523797-03:00", "level": "info", "message": "request_received", "correlation_id": "ef32e667-24f3-4cc2-a95c-7e61858df21a", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:40:29.534438-03:00", "level": "info", "message": "request_completed", "correlation_id": "ef32e667-24f3-4cc2-a95c-7e61858df21a", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:40:29.539898-03:00", "level": "info", "message": "request_received", "correlation_id": "2d06e0a8-1f4d-4fab-9c22-8925025cbde0", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:40:29.548396-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "2d06e0a8-1f4d-4fab-9c22-8925025cbde0", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:40:29.550924-03:00", "level": "info", "message": "request_completed", "correlation_id": "2d06e0a8-1f4d-4fab-9c22-8925025cbde0", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:40:34.144625-03:00", "level": "info", "message": "request_received", "correlation_id": "7c9f7340-cfec-4abb-ad07-a3e6c7093c14", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:40:34.146116-03:00", "level": "info", "message": "list_activities", "event": "list_activities", "correlation_id": "7c9f7340-cfec-4abb-ad07-a3e6c7093c14", "method": "GET", "path": "/api/v2/activities/", "result": "success"}
+{"timestamp": "2026-10-21T18:40:34.158986-03:00", "level": "info", "message": "request_completed", "correlation_id": "7c9f7340-cfec-4abb-ad07-a3e6c7093c14", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:40:35.316491-03:00", "level": "info", "message": "request_received", "correlation_id": "2681d3c1-d86a-4bb1-933d-3be59018ec6e", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:40:35.317035-03:00", "level": "info", "message": "request_completed", "correlation_id": "2681d3c1-d86a-4bb1-933d-3be59018ec6e", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:40:35.322039-03:00", "level": "info", "message": "request_received", "correlation_id": "1f00e2a7-1335-42b5-b879-066bff046b24", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:40:35.331216-03:00", "level": "info", "message": "request_completed", "correlation_id": "1f00e2a7-1335-42b5-b879-066bff046b24", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:40:35.336124-03:00", "level": "info", "message": "request_received", "correlation_id": "e5926b11-e959-4597-8b4d-6184b7fcf21d", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:40:35.344758-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "e5926b11-e959-4597-8b4d-6184b7fcf21d", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:40:35.345829-03:00", "level": "info", "message": "request_completed", "correlation_id": "e5926b11-e959-4597-8b4d-6184b7fcf21d", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:40:36.653702-03:00", "level": "info", "message": "request_received", "correlation_id": "9f85ea2e-2cf9-40b2-afed-455692f4fc47", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:40:36.654382-03:00", "level": "info", "message": "list_activities", "event": "list_activities", "correlation_id": "9f85ea2e-2cf9-40b2-afed-455692f4fc47", "method": "GET", "path": "/api/v2/activities/", "result": "success"}
+{"timestamp": "2026-10-21T18:40:36.663419-03:00", "level": "info", "message": "request_completed", "correlation_id": "9f85ea2e-2cf9-40b2-afed-455692f4fc47", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:40:40.166819-03:00", "level": "info", "message": "request_received", "correlation_id": "426deadd-d0de-4cdb-8fe0-3e8becd50ecd", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:40:40.167451-03:00", "level": "info", "message": "request_completed", "correlation_id": "426deadd-d0de-4cdb-8fe0-3e8becd50ecd", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:40:40.172986-03:00", "level": "info", "message": "request_received", "correlation_id": "4aabd5bf-3afd-42c5-912b-525ec99980d1", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:40:40.182353-03:00", "level": "info", "message": "request_completed", "correlation_id": "4aabd5bf-3afd-42c5-912b-525ec99980d1", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:40:40.187111-03:00", "level": "info", "message": "request_received", "correlation_id": "eb8f5393-b05d-4df2-a92f-fea240299694", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:40:40.195540-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "eb8f5393-b05d-4df2-a92f-fea240299694", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:40:40.197467-03:00", "level": "info", "message": "request_completed", "correlation_id": "eb8f5393-b05d-4df2-a92f-fea240299694", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:40:41.624552-03:00", "level": "info", "message": "request_received", "correlation_id": "e55f513b-153e-402f-9d91-90d21768fd7c", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/"}
+{"timestamp": "2026-10-21T18:40:41.631784-03:00", "level": "info", "message": "get_activity", "event": "get_activity", "correlation_id": "e55f513b-153e-402f-9d91-90d21768fd7c", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/", "result": "success"}
+{"timestamp": "2026-10-21T18:40:41.632301-03:00", "level": "info", "message": "request_completed", "correlation_id": "e55f513b-153e-402f-9d91-90d21768fd7c", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/"}
+{"timestamp": "2026-10-21T18:40:41.754640-03:00", "level": "info", "message": "request_received", "correlation_id": "1082ff62-11bd-4b34-b6c3-4abfd471ea4e", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:40:41.755720-03:00", "level": "info", "message": "request_completed", "correlation_id": "1082ff62-11bd-4b34-b6c3-4abfd471ea4e", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:40:41.756074-03:00", "level": "warning", "message": "Unauthorized: /api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:40:48.968594-03:00", "level": "info", "message": "request_received", "correlation_id": "91c8ed68-1c6e-4d50-9971-4fb8cad989dd", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:40:48.969118-03:00", "level": "info", "message": "request_completed", "correlation_id": "91c8ed68-1c6e-4d50-9971-4fb8cad989dd", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:40:48.974288-03:00", "level": "info", "message": "request_received", "correlation_id": "253f68bf-6a7b-45ed-867f-7743e139fb71", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:40:48.982896-03:00", "level": "info", "message": "request_completed", "correlation_id": "253f68bf-6a7b-45ed-867f-7743e139fb71", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:40:48.987713-03:00", "level": "info", "message": "request_received", "correlation_id": "59a36537-2039-47a4-8890-f90751557155", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:40:48.995351-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "59a36537-2039-47a4-8890-f90751557155", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:40:48.996729-03:00", "level": "info", "message": "request_completed", "correlation_id": "59a36537-2039-47a4-8890-f90751557155", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:48:28.418614-03:00", "level": "info", "message": "request_received", "correlation_id": "48e4d271-dd51-4305-9db6-a685fd09c39f", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:48:28.419731-03:00", "level": "info", "message": "request_completed", "correlation_id": "48e4d271-dd51-4305-9db6-a685fd09c39f", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:48:28.425284-03:00", "level": "info", "message": "request_received", "correlation_id": "eebd23e8-af19-467f-9ec7-62c64d41d24e", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:48:28.435678-03:00", "level": "info", "message": "request_completed", "correlation_id": "eebd23e8-af19-467f-9ec7-62c64d41d24e", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:48:28.441354-03:00", "level": "info", "message": "request_received", "correlation_id": "e520ab05-bca9-446d-bce4-11b0999db088", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:48:28.450078-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "e520ab05-bca9-446d-bce4-11b0999db088", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:48:28.451523-03:00", "level": "info", "message": "request_completed", "correlation_id": "e520ab05-bca9-446d-bce4-11b0999db088", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:49:41.187381-03:00", "level": "info", "message": "request_received", "correlation_id": "6a12bc4b-8826-4f07-9e4c-4942ff723c33", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:49:41.188369-03:00", "level": "info", "message": "request_completed", "correlation_id": "6a12bc4b-8826-4f07-9e4c-4942ff723c33", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:49:41.195034-03:00", "level": "info", "message": "request_received", "correlation_id": "4f16a213-6a8a-4553-a271-dc88ed37b129", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:49:41.204846-03:00", "level": "info", "message": "request_completed", "correlation_id": "4f16a213-6a8a-4553-a271-dc88ed37b129", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:49:41.211483-03:00", "level": "info", "message": "request_received", "correlation_id": "ed18aa49-39d2-4255-af09-52f14c41056e", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:49:41.219061-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "ed18aa49-39d2-4255-af09-52f14c41056e", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:49:41.220426-03:00", "level": "info", "message": "request_completed", "correlation_id": "ed18aa49-39d2-4255-af09-52f14c41056e", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:49:41.744530-03:00", "level": "info", "message": "request_received", "correlation_id": "8ac98ce2-aee8-43ee-8e5f-51402d822c71", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:49:41.745966-03:00", "level": "info", "message": "request_completed", "correlation_id": "8ac98ce2-aee8-43ee-8e5f-51402d822c71", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:49:41.751595-03:00", "level": "info", "message": "request_received", "correlation_id": "bd9e98e8-722d-42f7-a9b4-17b2b5b40d56", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:49:41.762054-03:00", "level": "info", "message": "request_completed", "correlation_id": "bd9e98e8-722d-42f7-a9b4-17b2b5b40d56", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:49:41.768816-03:00", "level": "info", "message": "request_received", "correlation_id": "0b82e6b5-3577-4c5d-afa5-0c78e78022b1", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:49:41.777031-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "0b82e6b5-3577-4c5d-afa5-0c78e78022b1", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:49:41.778374-03:00", "level": "info", "message": "request_completed", "correlation_id": "0b82e6b5-3577-4c5d-afa5-0c78e78022b1", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:49:42.741528-03:00", "level": "info", "message": "request_received", "correlation_id": "2916f5a0-1ba3-4c76-b64a-babf0b76517c", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:49:42.750581-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "2916f5a0-1ba3-4c76-b64a-babf0b76517c", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:49:42.751962-03:00", "level": "info", "message": "request_completed", "correlation_id": "2916f5a0-1ba3-4c76-b64a-babf0b76517c", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:50:24.044000-03:00", "level": "info", "message": "request_received", "correlation_id": "82e23132-7605-48d9-9f56-d09031912e11", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:24.044793-03:00", "level": "info", "message": "request_completed", "correlation_id": "82e23132-7605-48d9-9f56-d09031912e11", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:24.052475-03:00", "level": "info", "message": "request_received", "correlation_id": "8a284be1-3f67-4480-b70f-794f917298dc", "method": "POST", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T18:50:24.068503-03:00", "level": "info", "message": "request_completed", "correlation_id": "8a284be1-3f67-4480-b70f-794f917298dc", "method": "POST", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T18:50:24.230402-03:00", "level": "info", "message": "request_received", "correlation_id": "fc8918b4-8e6e-4412-a130-f4da1de6ee0e", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:24.231055-03:00", "level": "info", "message": "request_completed", "correlation_id": "fc8918b4-8e6e-4412-a130-f4da1de6ee0e", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:24.237103-03:00", "level": "info", "message": "request_received", "correlation_id": "a2b79328-041e-4de6-95a5-f517a3123f00", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:24.237735-03:00", "level": "info", "message": "request_completed", "correlation_id": "a2b79328-041e-4de6-95a5-f517a3123f00", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:24.237965-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:25.740444-03:00", "level": "info", "message": "request_received", "correlation_id": "ca621267-9717-4e9d-956a-7565d0efcaf3", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:25.741072-03:00", "level": "info", "message": "request_completed", "correlation_id": "ca621267-9717-4e9d-956a-7565d0efcaf3", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:25.746248-03:00", "level": "info", "message": "request_received", "correlation_id": "b6d5ee55-57cc-4e14-9c67-1ae68d3fcc83", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T18:50:25.877413-03:00", "level": "info", "message": "request_completed", "correlation_id": "b6d5ee55-57cc-4e14-9c67-1ae68d3fcc83", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T18:50:27.072263-03:00", "level": "info", "message": "request_received", "correlation_id": "cdcd1dba-dc13-48cb-82b1-1a7f1537ddb2", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:27.072816-03:00", "level": "info", "message": "request_completed", "correlation_id": "cdcd1dba-dc13-48cb-82b1-1a7f1537ddb2", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:27.079118-03:00", "level": "info", "message": "request_received", "correlation_id": "b6180533-dd15-4adc-933b-64a8764aa8f2", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:27.087711-03:00", "level": "info", "message": "request_completed", "correlation_id": "b6180533-dd15-4adc-933b-64a8764aa8f2", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:27.093968-03:00", "level": "info", "message": "request_received", "correlation_id": "01fdf23b-d1b2-4e57-89c4-1cc0ded13994", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:50:27.101466-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "01fdf23b-d1b2-4e57-89c4-1cc0ded13994", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:50:27.102994-03:00", "level": "info", "message": "request_completed", "correlation_id": "01fdf23b-d1b2-4e57-89c4-1cc0ded13994", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:50:27.771841-03:00", "level": "info", "message": "request_received", "correlation_id": "015ad241-6a7a-4225-ae2c-1b562b9dddcb", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:50:27.772840-03:00", "level": "info", "message": "list_activities", "event": "list_activities", "correlation_id": "015ad241-6a7a-4225-ae2c-1b562b9dddcb", "method": "GET", "path": "/api/v2/activities/", "result": "success"}
+{"timestamp": "2026-10-21T18:50:27.782045-03:00", "level": "info", "message": "request_completed", "correlation_id": "015ad241-6a7a-4225-ae2c-1b562b9dddcb", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:50:27.888035-03:00", "level": "info", "message": "request_received", "correlation_id": "f0819da4-ab56-4d1c-994f-e0086f19cdcd", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:27.888721-03:00", "level": "info", "message": "request_completed", "correlation_id": "f0819da4-ab56-4d1c-994f-e0086f19cdcd", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:27.894086-03:00", "level": "info", "message": "request_received", "correlation_id": "187dc15a-56f1-4d3b-b9e1-e28344f9246d", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:27.905536-03:00", "level": "info", "message": "request_completed", "correlation_id": "187dc15a-56f1-4d3b-b9e1-e28344f9246d", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:28.359942-03:00", "level": "info", "message": "request_received", "correlation_id": "6b5fb27b-9d8c-4b8d-9572-4f5cb14356b6", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:28.360453-03:00", "level": "info", "message": "request_completed", "correlation_id": "6b5fb27b-9d8c-4b8d-9572-4f5cb14356b6", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:28.365286-03:00", "level": "info", "message": "request_received", "correlation_id": "93ebb299-c030-4e8a-9e58-220b1a0a1204", "method": "POST", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T18:50:28.374394-03:00", "level": "info", "message": "request_completed", "correlation_id": "93ebb299-c030-4e8a-9e58-220b1a0a1204", "method": "POST", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T18:50:28.500590-03:00", "level": "info", "message": "request_received", "correlation_id": "7751df34-af16-438b-9ffa-c925a07d4a89", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:28.501145-03:00", "level": "info", "message": "request_completed", "correlation_id": "7751df34-af16-438b-9ffa-c925a07d4a89", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:28.508832-03:00", "level": "info", "message": "request_received", "correlation_id": "4457524c-9984-4012-984e-b8da5566dfc3", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:28.509456-03:00", "level": "info", "message": "request_completed", "correlation_id": "4457524c-9984-4012-984e-b8da5566dfc3", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:28.509704-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:29.602569-03:00", "level": "info", "message": "request_received", "correlation_id": "8bf28a23-df27-4357-a908-25d4017c1e1c", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:50:29.603250-03:00", "level": "info", "message": "list_activities", "event": "list_activities", "correlation_id": "8bf28a23-df27-4357-a908-25d4017c1e1c", "method": "GET", "path": "/api/v2/activities/", "result": "success"}
+{"timestamp": "2026-10-21T18:50:29.611701-03:00", "level": "info", "message": "request_completed", "correlation_id": "8bf28a23-df27-4357-a908-25d4017c1e1c", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:50:29.719599-03:00", "level": "info", "message": "request_received", "correlation_id": "243316ed-87b0-4faf-8ab6-b998352f2af0", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:29.720135-03:00", "level": "info", "message": "request_completed", "correlation_id": "243316ed-87b0-4faf-8ab6-b998352f2af0", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:29.724521-03:00", "level": "info", "message": "request_received", "correlation_id": "d161859f-f5b3-4fd4-94bb-fa772b9764cc", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:29.725010-03:00", "level": "info", "message": "request_completed", "correlation_id": "d161859f-f5b3-4fd4-94bb-fa772b9764cc", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:29.725204-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:30.972582-03:00", "level": "info", "message": "request_received", "correlation_id": "02c0c86e-1dda-4721-a1b2-eab1521e45dd", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:30.973128-03:00", "level": "info", "message": "request_completed", "correlation_id": "02c0c86e-1dda-4721-a1b2-eab1521e45dd", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:30.977679-03:00", "level": "info", "message": "request_received", "correlation_id": "b4ab6c21-d85f-4a97-a024-d20718216888", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:30.978219-03:00", "level": "info", "message": "request_completed", "correlation_id": "b4ab6c21-d85f-4a97-a024-d20718216888", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:30.978417-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:33.082330-03:00", "level": "info", "message": "request_received", "correlation_id": "98b9abb1-f0ea-437d-b17d-57a4bd7a1a10", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:33.083210-03:00", "level": "info", "message": "request_completed", "correlation_id": "98b9abb1-f0ea-437d-b17d-57a4bd7a1a10", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:33.094499-03:00", "level": "info", "message": "request_received", "correlation_id": "4aee20b3-d05f-4310-87fb-5767a21533ea", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:33.095252-03:00", "level": "info", "message": "request_completed", "correlation_id": "4aee20b3-d05f-4310-87fb-5767a21533ea", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:33.095577-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:39.375437-03:00", "level": "info", "message": "request_received", "correlation_id": "70be4e46-cf0c-427a-bc24-00d1cd53309d", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:50:39.376199-03:00", "level": "info", "message": "list_activities", "event": "list_activities", "correlation_id": "70be4e46-cf0c-427a-bc24-00d1cd53309d", "method": "GET", "path": "/api/v2/activities/", "result": "success"}
+{"timestamp": "2026-10-21T18:50:39.386678-03:00", "level": "info", "message": "request_completed", "correlation_id": "70be4e46-cf0c-427a-bc24-00d1cd53309d", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:50:39.487355-03:00", "level": "info", "message": "request_received", "correlation_id": "bf09df35-f6bf-4242-829c-25cd8a28c561", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:39.487885-03:00", "level": "info", "message": "request_completed", "correlation_id": "bf09df35-f6bf-4242-829c-25cd8a28c561", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:50:39.491985-03:00", "level": "info", "message": "request_received", "correlation_id": "ca76b33f-9837-472c-9d20-90b6f2ed771d", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:39.492444-03:00", "level": "info", "message": "request_completed", "correlation_id": "ca76b33f-9837-472c-9d20-90b6f2ed771d", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:50:39.492665-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:48.038246-03:00", "level": "info", "message": "request_received", "correlation_id": "3b61033f-21b7-4a23-9c09-533a9ed6e7c9", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:48.039026-03:00", "level": "info", "message": "request_completed", "correlation_id": "3b61033f-21b7-4a23-9c09-533a9ed6e7c9", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:48.044806-03:00", "level": "info", "message": "request_received", "correlation_id": "2b3e175f-53fa-4272-a1f0-113e821c3d43", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:48.045363-03:00", "level": "info", "message": "request_completed", "correlation_id": "2b3e175f-53fa-4272-a1f0-113e821c3d43", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:48.045568-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:49.820514-03:00", "level": "info", "message": "request_received", "correlation_id": "ad0512f1-714a-495b-8692-c6f3de85ebbe", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:49.821041-03:00", "level": "info", "message": "request_completed", "correlation_id": "ad0512f1-714a-495b-8692-c6f3de85ebbe", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:49.825367-03:00", "level": "info", "message": "request_received", "correlation_id": "4e87b776-28f1-40e3-89e2-362ea0d74313", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:49.825933-03:00", "level": "info", "message": "request_completed", "correlation_id": "4e87b776-28f1-40e3-89e2-362ea0d74313", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:49.826221-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:50.534941-03:00", "level": "info", "message": "request_received", "correlation_id": "abfa2ad8-fcdb-41c4-81c1-8a82b859d1da", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:50.535519-03:00", "level": "info", "message": "request_completed", "correlation_id": "abfa2ad8-fcdb-41c4-81c1-8a82b859d1da", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:50.540707-03:00", "level": "info", "message": "request_received", "correlation_id": "ef120e32-d1ca-4b65-97c6-d09fbad557b5", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T18:51:50.670873-03:00", "level": "info", "message": "request_completed", "correlation_id": "ef120e32-d1ca-4b65-97c6-d09fbad557b5", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T18:51:51.515031-03:00", "level": "info", "message": "request_received", "correlation_id": "b1d0c3cc-090b-4d03-9dac-a30f7dde0adc", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:51.515550-03:00", "level": "info", "message": "request_completed", "correlation_id": "b1d0c3cc-090b-4d03-9dac-a30f7dde0adc", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:51.519597-03:00", "level": "info", "message": "request_received", "correlation_id": "5744229c-fbe5-44b5-bccf-a8d0f2fef12b", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:51.528293-03:00", "level": "info", "message": "request_completed", "correlation_id": "5744229c-fbe5-44b5-bccf-a8d0f2fef12b", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:51.533354-03:00", "level": "info", "message": "request_received", "correlation_id": "ba8ba690-a848-4d90-b3b4-3bb59bf1609e", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:51:51.541264-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "ba8ba690-a848-4d90-b3b4-3bb59bf1609e", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:51:51.542353-03:00", "level": "info", "message": "request_completed", "correlation_id": "ba8ba690-a848-4d90-b3b4-3bb59bf1609e", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:51:52.950721-03:00", "level": "info", "message": "request_received", "correlation_id": "1221c09d-21d3-4a43-bfdd-4bec9a1712f5", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:52.951370-03:00", "level": "info", "message": "request_completed", "correlation_id": "1221c09d-21d3-4a43-bfdd-4bec9a1712f5", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:52.957583-03:00", "level": "info", "message": "request_received", "correlation_id": "72ed1738-a959-4e4b-8a6a-51227f075b37", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:52.966940-03:00", "level": "info", "message": "request_completed", "correlation_id": "72ed1738-a959-4e4b-8a6a-51227f075b37", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:52.971800-03:00", "level": "info", "message": "request_received", "correlation_id": "153498cf-b8fb-4e29-99f3-1cf04b541ce1", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:51:52.980270-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "153498cf-b8fb-4e29-99f3-1cf04b541ce1", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:51:52.981380-03:00", "level": "info", "message": "request_completed", "correlation_id": "153498cf-b8fb-4e29-99f3-1cf04b541ce1", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:51:53.389760-03:00", "level": "info", "message": "request_received", "correlation_id": "717a0fda-f522-482f-8ea9-f930b579d71a", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:51:53.390538-03:00", "level": "info", "message": "list_activities", "event": "list_activities", "correlation_id": "717a0fda-f522-482f-8ea9-f930b579d71a", "method": "GET", "path": "/api/v2/activities/", "result": "success"}
+{"timestamp": "2026-10-21T18:51:53.399456-03:00", "level": "info", "message": "request_completed", "correlation_id": "717a0fda-f522-482f-8ea9-f930b579d71a", "method": "GET", "path": "/api/v2/activities/"}
+{"timestamp": "2026-10-21T18:51:53.509622-03:00", "level": "info", "message": "request_received", "correlation_id": "ed5cdd63-bc38-478d-9a51-1f83ec6fcec0", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:53.510177-03:00", "level": "info", "message": "request_completed", "correlation_id": "ed5cdd63-bc38-478d-9a51-1f83ec6fcec0", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:53.514639-03:00", "level": "info", "message": "request_received", "correlation_id": "992d20ec-b1d3-454b-be37-2f7180adf935", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:53.523248-03:00", "level": "info", "message": "request_completed", "correlation_id": "992d20ec-b1d3-454b-be37-2f7180adf935", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:54.659859-03:00", "level": "info", "message": "request_received", "correlation_id": "7c80ec9d-3d40-427c-bad5-f32323b3c0d0", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:54.660526-03:00", "level": "info", "message": "request_completed", "correlation_id": "7c80ec9d-3d40-427c-bad5-f32323b3c0d0", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:54.665552-03:00", "level": "info", "message": "request_received", "correlation_id": "85f53458-0563-4f20-94bc-17003754cc17", "method": "POST", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T18:51:54.675966-03:00", "level": "info", "message": "request_completed", "correlation_id": "85f53458-0563-4f20-94bc-17003754cc17", "method": "POST", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T18:51:54.801314-03:00", "level": "info", "message": "request_received", "correlation_id": "58d3cf19-676b-4249-9a74-3b4f813bdb9c", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:54.802209-03:00", "level": "info", "message": "request_completed", "correlation_id": "58d3cf19-676b-4249-9a74-3b4f813bdb9c", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:54.810025-03:00", "level": "info", "message": "request_received", "correlation_id": "5e054329-80a5-4f5f-bf32-06697cb666cf", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:54.811183-03:00", "level": "info", "message": "request_completed", "correlation_id": "5e054329-80a5-4f5f-bf32-06697cb666cf", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:54.811745-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:58.705443-03:00", "level": "info", "message": "request_received", "correlation_id": "a9b7685d-f18b-4da1-ae43-d89d0ff55965", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:58.705997-03:00", "level": "info", "message": "request_completed", "correlation_id": "a9b7685d-f18b-4da1-ae43-d89d0ff55965", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:51:58.717246-03:00", "level": "info", "message": "request_received", "correlation_id": "b7776194-ac57-4068-aab6-5c5964be9d2a", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:58.717756-03:00", "level": "info", "message": "request_completed", "correlation_id": "b7776194-ac57-4068-aab6-5c5964be9d2a", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:51:58.717954-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:52:34.315761-03:00", "level": "info", "message": "request_received", "correlation_id": "2d1e9ee5-4fd3-4ba3-a0cd-0048f120498f", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:52:34.316440-03:00", "level": "info", "message": "request_completed", "correlation_id": "2d1e9ee5-4fd3-4ba3-a0cd-0048f120498f", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:52:34.322394-03:00", "level": "info", "message": "request_received", "correlation_id": "9803192a-17e6-4d93-8217-719b4ae673be", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:52:34.323277-03:00", "level": "info", "message": "request_completed", "correlation_id": "9803192a-17e6-4d93-8217-719b4ae673be", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:52:34.323646-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:55:41.032036-03:00", "level": "info", "message": "request_received", "correlation_id": "51cdf37b-de47-4749-9722-2142a769308a", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/"}
+{"timestamp": "2026-10-21T18:55:41.045303-03:00", "level": "info", "message": "get_activity", "event": "get_activity", "correlation_id": "51cdf37b-de47-4749-9722-2142a769308a", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/", "result": "success"}
+{"timestamp": "2026-10-21T18:55:41.046166-03:00", "level": "info", "message": "request_completed", "correlation_id": "51cdf37b-de47-4749-9722-2142a769308a", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/"}
+{"timestamp": "2026-10-21T18:57:06.842744-03:00", "level": "info", "message": "request_received", "correlation_id": "a46ae62e-99ca-4597-a6e7-ad832a19e8d3", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:06.843513-03:00", "level": "info", "message": "request_completed", "correlation_id": "a46ae62e-99ca-4597-a6e7-ad832a19e8d3", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:06.849141-03:00", "level": "info", "message": "request_received", "correlation_id": "9d574a3d-40bf-48c9-8121-76e921d7cb9d", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:06.849868-03:00", "level": "info", "message": "request_completed", "correlation_id": "9d574a3d-40bf-48c9-8121-76e921d7cb9d", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:06.850160-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:45.655987-03:00", "level": "info", "message": "request_received", "correlation_id": "a5bb4a7f-3953-4666-8865-c4b22d54a354", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:45.656543-03:00", "level": "info", "message": "request_completed", "correlation_id": "a5bb4a7f-3953-4666-8865-c4b22d54a354", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:45.661773-03:00", "level": "info", "message": "request_received", "correlation_id": "7fea78d8-42bc-496a-9d0c-3979567debb1", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T18:57:45.794777-03:00", "level": "info", "message": "request_completed", "correlation_id": "7fea78d8-42bc-496a-9d0c-3979567debb1", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T18:57:47.194955-03:00", "level": "info", "message": "request_received", "correlation_id": "9e0c4d50-5885-4673-989c-ddc80c0e9aba", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:47.195610-03:00", "level": "info", "message": "request_completed", "correlation_id": "9e0c4d50-5885-4673-989c-ddc80c0e9aba", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:47.201747-03:00", "level": "info", "message": "request_received", "correlation_id": "f7d35bf2-1871-482f-a2f5-cda41896bd38", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:47.210200-03:00", "level": "info", "message": "request_completed", "correlation_id": "f7d35bf2-1871-482f-a2f5-cda41896bd38", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:47.216071-03:00", "level": "info", "message": "request_received", "correlation_id": "5ef9ef27-3d36-488e-9640-c6d79da64da6", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:57:47.223489-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "5ef9ef27-3d36-488e-9640-c6d79da64da6", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:57:47.225235-03:00", "level": "info", "message": "request_completed", "correlation_id": "5ef9ef27-3d36-488e-9640-c6d79da64da6", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:57:48.624621-03:00", "level": "info", "message": "request_received", "correlation_id": "49086a56-9c41-4098-acf2-a892a1637ef2", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:48.625301-03:00", "level": "info", "message": "request_completed", "correlation_id": "49086a56-9c41-4098-acf2-a892a1637ef2", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:48.630550-03:00", "level": "info", "message": "request_received", "correlation_id": "05f052d2-a4ee-497a-8ce4-b23d17db33e4", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:48.639522-03:00", "level": "info", "message": "request_completed", "correlation_id": "05f052d2-a4ee-497a-8ce4-b23d17db33e4", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:48.645285-03:00", "level": "info", "message": "request_received", "correlation_id": "e846fd9e-163b-4e7d-a4bb-7050303c7d6e", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:57:48.653087-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "e846fd9e-163b-4e7d-a4bb-7050303c7d6e", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:57:48.654432-03:00", "level": "info", "message": "request_completed", "correlation_id": "e846fd9e-163b-4e7d-a4bb-7050303c7d6e", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:57:50.595065-03:00", "level": "info", "message": "request_received", "correlation_id": "1b5a63cc-2aa2-4d12-896a-936a2303bbf5", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/"}
+{"timestamp": "2026-10-21T18:57:50.602125-03:00", "level": "info", "message": "get_activity", "event": "get_activity", "correlation_id": "1b5a63cc-2aa2-4d12-896a-936a2303bbf5", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/", "result": "success"}
+{"timestamp": "2026-10-21T18:57:50.602660-03:00", "level": "info", "message": "request_completed", "correlation_id": "1b5a63cc-2aa2-4d12-896a-936a2303bbf5", "method": "GET", "path": "/api/v2/activities/1b470ddf-3e84-4b77-9aae-091d21e52bd6/"}
+{"timestamp": "2026-10-21T18:57:50.723045-03:00", "level": "info", "message": "request_received", "correlation_id": "19b16b73-a907-4819-b0a4-519ddeb36ae1", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:50.723588-03:00", "level": "info", "message": "request_completed", "correlation_id": "19b16b73-a907-4819-b0a4-519ddeb36ae1", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:50.728228-03:00", "level": "info", "message": "request_received", "correlation_id": "2251c7e3-549d-40cd-93a5-77e4760fa933", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:50.736964-03:00", "level": "info", "message": "request_completed", "correlation_id": "2251c7e3-549d-40cd-93a5-77e4760fa933", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:50.741900-03:00", "level": "info", "message": "request_received", "correlation_id": "583a7ffc-3338-4a3b-9b2c-d1d20a231570", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:57:50.749656-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "583a7ffc-3338-4a3b-9b2c-d1d20a231570", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:57:50.750733-03:00", "level": "info", "message": "request_completed", "correlation_id": "583a7ffc-3338-4a3b-9b2c-d1d20a231570", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:57:56.096463-03:00", "level": "info", "message": "request_received", "correlation_id": "92127b2a-2539-480a-ab87-7ea9ec187e34", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:56.097066-03:00", "level": "info", "message": "request_completed", "correlation_id": "92127b2a-2539-480a-ab87-7ea9ec187e34", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:56.101851-03:00", "level": "info", "message": "request_received", "correlation_id": "49232421-17ad-4b50-b579-761f06e5dc8f", "method": "POST", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T18:57:56.111976-03:00", "level": "info", "message": "request_completed", "correlation_id": "49232421-17ad-4b50-b579-761f06e5dc8f", "method": "POST", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T18:57:56.239261-03:00", "level": "info", "message": "request_received", "correlation_id": "5ffeed12-c303-41d5-84bf-6373501034a3", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:56.240031-03:00", "level": "info", "message": "request_completed", "correlation_id": "5ffeed12-c303-41d5-84bf-6373501034a3", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:56.247823-03:00", "level": "info", "message": "request_received", "correlation_id": "216a7d68-03f8-4681-a3cb-668c0ae8daa7", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:56.248447-03:00", "level": "info", "message": "request_completed", "correlation_id": "216a7d68-03f8-4681-a3cb-668c0ae8daa7", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:56.248675-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:57.101976-03:00", "level": "info", "message": "request_received", "correlation_id": "33b90d99-6469-4f67-995a-e0d513110242", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:57.102620-03:00", "level": "info", "message": "request_completed", "correlation_id": "33b90d99-6469-4f67-995a-e0d513110242", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:57.109656-03:00", "level": "info", "message": "request_received", "correlation_id": "6d401265-c899-4f50-b338-cea3013b8dfb", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T18:57:57.242169-03:00", "level": "info", "message": "request_completed", "correlation_id": "6d401265-c899-4f50-b338-cea3013b8dfb", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T18:57:58.093159-03:00", "level": "info", "message": "request_received", "correlation_id": "c9925527-e1e9-46c4-8269-af2a05771f1b", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:58.094225-03:00", "level": "info", "message": "request_completed", "correlation_id": "c9925527-e1e9-46c4-8269-af2a05771f1b", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:58.100901-03:00", "level": "info", "message": "request_received", "correlation_id": "0f2031af-3fb7-4583-80c5-04722d20e57d", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:58.113833-03:00", "level": "info", "message": "request_completed", "correlation_id": "0f2031af-3fb7-4583-80c5-04722d20e57d", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:58.121265-03:00", "level": "info", "message": "request_received", "correlation_id": "a70161cd-3960-432d-a7d2-3e7f2aacb1ee", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:57:58.134696-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "a70161cd-3960-432d-a7d2-3e7f2aacb1ee", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:57:58.136472-03:00", "level": "info", "message": "request_completed", "correlation_id": "a70161cd-3960-432d-a7d2-3e7f2aacb1ee", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:57:59.017119-03:00", "level": "info", "message": "request_received", "correlation_id": "11944d1c-ff49-462d-a71d-68321e266a9a", "method": "GET", "path": "/api/v2/activities/6ccaf64f-d37e-4e6c-ae03-f3d6547bb297/"}
+{"timestamp": "2026-10-21T18:57:59.024332-03:00", "level": "info", "message": "get_activity", "event": "get_activity", "correlation_id": "11944d1c-ff49-462d-a71d-68321e266a9a", "method": "GET", "path": "/api/v2/activities/6ccaf64f-d37e-4e6c-ae03-f3d6547bb297/", "result": "success"}
+{"timestamp": "2026-10-21T18:57:59.024851-03:00", "level": "info", "message": "request_completed", "correlation_id": "11944d1c-ff49-462d-a71d-68321e266a9a", "method": "GET", "path": "/api/v2/activities/6ccaf64f-d37e-4e6c-ae03-f3d6547bb297/"}
+{"timestamp": "2026-10-21T18:57:59.130427-03:00", "level": "info", "message": "request_received", "correlation_id": "ced0a0ce-9d87-492a-9767-fb83efaa3d41", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:59.131007-03:00", "level": "info", "message": "request_completed", "correlation_id": "ced0a0ce-9d87-492a-9767-fb83efaa3d41", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:57:59.135965-03:00", "level": "info", "message": "request_received", "correlation_id": "94db9712-3d2f-4e2b-8bd3-5428c25aaaab", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:59.144414-03:00", "level": "info", "message": "request_completed", "correlation_id": "94db9712-3d2f-4e2b-8bd3-5428c25aaaab", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:57:59.150253-03:00", "level": "info", "message": "request_received", "correlation_id": "dc976729-5748-4856-8f25-20ac78244fe9", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:57:59.157928-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "dc976729-5748-4856-8f25-20ac78244fe9", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T18:57:59.159132-03:00", "level": "info", "message": "request_completed", "correlation_id": "dc976729-5748-4856-8f25-20ac78244fe9", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T18:58:03.574789-03:00", "level": "info", "message": "request_received", "correlation_id": "b6f8a833-74ce-4b80-b704-4290cf2045a3", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:58:03.575882-03:00", "level": "info", "message": "request_completed", "correlation_id": "b6f8a833-74ce-4b80-b704-4290cf2045a3", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:58:03.581148-03:00", "level": "info", "message": "request_received", "correlation_id": "b736bbfb-8dd7-4f40-a2fa-8f21a0a48f57", "method": "POST", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T18:58:03.589687-03:00", "level": "info", "message": "request_completed", "correlation_id": "b736bbfb-8dd7-4f40-a2fa-8f21a0a48f57", "method": "POST", "path": "/api/v2/auth/logout/"}
+{"timestamp": "2026-10-21T18:58:03.711505-03:00", "level": "info", "message": "request_received", "correlation_id": "96c513cb-d3c3-4669-9714-33c35c20661d", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:58:03.712145-03:00", "level": "info", "message": "request_completed", "correlation_id": "96c513cb-d3c3-4669-9714-33c35c20661d", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T18:58:03.716643-03:00", "level": "info", "message": "request_received", "correlation_id": "b78a9241-5fcc-4b67-ba1d-8c29fc2d1e5b", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:58:03.717185-03:00", "level": "info", "message": "request_completed", "correlation_id": "b78a9241-5fcc-4b67-ba1d-8c29fc2d1e5b", "method": "POST", "path": "/api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T18:58:03.717389-03:00", "level": "warning", "message": "Unauthorized: /api/v2/auth/refresh/"}
+{"timestamp": "2026-10-21T19:04:29.735015-03:00", "level": "info", "message": "request_received", "correlation_id": "8da6bb38-35da-4fc4-b458-740cf2c9e877", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T19:04:29.737479-03:00", "level": "info", "message": "request_completed", "correlation_id": "8da6bb38-35da-4fc4-b458-740cf2c9e877", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T19:04:29.738064-03:00", "level": "info", "message": "request_received", "correlation_id": "1d33e8d2-143e-4f2d-b575-c4783d272230", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T19:04:29.861900-03:00", "level": "info", "message": "request_completed", "correlation_id": "1d33e8d2-143e-4f2d-b575-c4783d272230", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T19:04:29.862521-03:00", "level": "info", "message": "request_received", "correlation_id": "0ba9b3b5-cb7a-4042-89c2-ef6759aea9b7", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T19:04:29.865022-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "0ba9b3b5-cb7a-4042-89c2-ef6759aea9b7", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T19:04:29.866268-03:00", "level": "info", "message": "request_completed", "correlation_id": "0ba9b3b5-cb7a-4042-89c2-ef6759aea9b7", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T19:04:29.866834-03:00", "level": "info", "message": "request_received", "correlation_id": "a0fc8065-3c8c-4d32-b9dd-50e5d13be78c", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T19:04:29.867226-03:00", "level": "info", "message": "request_completed", "correlation_id": "a0fc8065-3c8c-4d32-b9dd-50e5d13be78c", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T19:04:29.867634-03:00", "level": "info", "message": "request_received", "correlation_id": "955992cb-d1be-450b-8260-559ece414c43", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T19:04:29.990861-03:00", "level": "info", "message": "request_completed", "correlation_id": "955992cb-d1be-450b-8260-559ece414c43", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T19:04:29.991389-03:00", "level": "info", "message": "request_received", "correlation_id": "16bffaaf-912d-4cf6-910f-5419f6e3a675", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T19:04:29.993642-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "16bffaaf-912d-4cf6-910f-5419f6e3a675", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T19:04:29.994644-03:00", "level": "info", "message": "request_completed", "correlation_id": "16bffaaf-912d-4cf6-910f-5419f6e3a675", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T19:04:51.293056-03:00", "level": "info", "message": "request_received", "correlation_id": "d323a093-3821-43ec-8b80-e23644654a5a", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T19:04:51.295220-03:00", "level": "info", "message": "request_completed", "correlation_id": "d323a093-3821-43ec-8b80-e23644654a5a", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T19:04:51.295959-03:00", "level": "info", "message": "request_received", "correlation_id": "53548821-c8e9-47ae-8d1f-1dc223b7fd23", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T19:04:51.419830-03:00", "level": "info", "message": "request_completed", "correlation_id": "53548821-c8e9-47ae-8d1f-1dc223b7fd23", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T19:04:51.420319-03:00", "level": "info", "message": "request_received", "correlation_id": "e73aa3e2-8bb3-492a-a9b3-cbb7ed909a7e", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T19:04:51.422447-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "e73aa3e2-8bb3-492a-a9b3-cbb7ed909a7e", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T19:04:51.423800-03:00", "level": "info", "message": "request_completed", "correlation_id": "e73aa3e2-8bb3-492a-a9b3-cbb7ed909a7e", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T19:04:51.424331-03:00", "level": "info", "message": "request_received", "correlation_id": "1d5db7b6-a976-4cb8-a61b-bc795f1e98b1", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T19:04:51.424828-03:00", "level": "info", "message": "request_completed", "correlation_id": "1d5db7b6-a976-4cb8-a61b-bc795f1e98b1", "method": "GET", "path": "/api/v2/auth/csrf/"}
+{"timestamp": "2026-10-21T19:04:51.425275-03:00", "level": "info", "message": "request_received", "correlation_id": "cb3d7b63-d721-4e0e-8d64-8efec90db6d5", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T19:04:51.550170-03:00", "level": "info", "message": "request_completed", "correlation_id": "cb3d7b63-d721-4e0e-8d64-8efec90db6d5", "method": "POST", "path": "/api/v2/auth/login/"}
+{"timestamp": "2026-10-21T19:04:51.550646-03:00", "level": "info", "message": "request_received", "correlation_id": "99da58ba-f63e-49e6-82c0-04a7d9b7c660", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T19:04:51.552438-03:00", "level": "info", "message": "get_enrollments", "event": "get_enrollments", "correlation_id": "99da58ba-f63e-49e6-82c0-04a7d9b7c660", "method": "GET", "path": "/api/v2/me/enrollments/", "result": "success"}
+{"timestamp": "2026-10-21T19:04:51.553282-03:00", "level": "info", "message": "request_completed", "correlation_id": "99da58ba-f63e-49e6-82c0-04a7d9b7c660", "method": "GET", "path": "/api/v2/me/enrollments/"}
+{"timestamp": "2026-10-21T19:04:54.034385-03:00", "level": "info", "message": "request_received", "correlation_id": "85be95a1-56b5-4ef1-b5a0-d07dbf45409b", "method": "GET", "path": "/api/v1/"}
+{"timestamp": "2026-10-21T19:04:54.045127-03:00", "level": "info", "message": "request_completed", "correlation_id": "85be95a1-56b5-4ef1-b5a0-d07dbf45409b", "method": "GET", "path": "/api/v1/"}
+{"timestamp": "2026-10-21T19:04:54.046928-03:00", "level": "info", "message": "request_received", "correlation_id": "43aa0d4b-1b29-4f40-8ed7-bd64b9b070fc", "method": "POST", "path": "/api/v1/"}
+{"timestamp": "2026-10-21T19:04:54.047827-03:00", "level": "info", "message": "request_completed", "correlation_id": "43aa0d4b-1b29-4f40-8ed7-bd64b9b070fc", "method": "POST", "path": "/api/v1/"}

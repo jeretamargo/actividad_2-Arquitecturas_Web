@@ -102,6 +102,44 @@ a {
   font-size: 0.82rem;
 }
 
+.header-inner {
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-block: 12px;
+}
+
+.session-controls {
+  max-width: 100%;
+}
+
+.session-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.86rem;
+}
+
+.session-error {
+  margin-top: 8px;
+  color: #8f4444;
+  font-size: 0.82rem;
+}
+
+.session-error button {
+  margin-left: 8px;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
 .content {
   padding: 64px 0 80px;
 }
